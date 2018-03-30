@@ -1,0 +1,61 @@
+// General Styles
+
+// @font-face {
+// 	font-family: $family;
+// 	src: url('#{$src}.eot'); // IE9 compat
+// 	src: url('#{$src}.eot?#iefix') format('embedded-opentype'), // IE8 and below
+// 	url('#{$src}.woff') format('woff'), // standards
+// 	url('#{$src}.ttf') format('truetype'), // Safari, Android, iOS
+// 	url('#{$src}.svg##{$family}') format('svg'); // legacy iOS
+
+// 	font-style: $style;
+// 	font-weight: $weight;
+// }
+
+h1, h2, h3, h4, h5, h6 {
+	text-transform: uppercase;
+}
+
+h1 {
+	color: $primary;
+	font-size: 6.25em;
+}
+
+h2 {
+	font-size: 4.5em;
+}
+
+hr {
+	background: $primary;
+    height: 1px;
+    margin: 0;
+    width: 10%;
+}
+
+.campaign-tag {
+	color: $primary;
+	font-style: italic;
+}
+
+// Website
+
+.wrapper {
+	padding: 60px 0;
+}
+
+.logo {
+	margin: 0 30px;
+}
+
+.site-signup {
+	background: url(../img/background.png) repeat;
+}
+
+.signup-footer {
+	font-size: 0.875em; //14px
+	text-align: right;
+
+	span {
+		vertical-align: bottom;
+	}
+}
