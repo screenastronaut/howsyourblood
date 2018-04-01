@@ -1,35 +1,51 @@
 // General Styles
 
-// @font-face {
-// 	font-family: $family;
-// 	src: url('#{$src}.eot'); // IE9 compat
-// 	src: url('#{$src}.eot?#iefix') format('embedded-opentype'), // IE8 and below
-// 	url('#{$src}.woff') format('woff'), // standards
-// 	url('#{$src}.ttf') format('truetype'), // Safari, Android, iOS
-// 	url('#{$src}.svg##{$family}') format('svg'); // legacy iOS
+@import url("https://use.typekit.net/qil2ina.css");
+@import url("https://use.typekit.net/bjf8xds.css"); 
 
-// 	font-style: $style;
-// 	font-weight: $weight;
-// }
+body {
+	font-family: acumin-pro-condensed, sans-serif;
+	font-style: normal;
+	font-weight: 800;
+}
 
 h1, h2, h3, h4, h5, h6 {
+	font-family: acumin-pro-condensed, sans-serif;
+	font-style: italic;
+	font-weight: 800;
+	line-height: 0.8;
 	text-transform: uppercase;
 }
 
 h1 {
 	color: $primary;
-	font-size: 6.25em;
+	font-size: 100px;
+	margin-bottom: 30px;
 }
 
 h2 {
-	font-size: 4.5em;
+	font-size: 44px;
+}
+
+p {
+	font-size: 24px;
+	line-height: 1.2;
+}
+
+a {
+	color: $primary;
+	text-decoration: underline;
+
+	&:hover {
+		text-decoration: none;
+	}
 }
 
 hr {
 	background: $primary;
-    height: 1px;
-    margin: 0;
-    width: 10%;
+	height: 1px;
+	margin: 30px 0;
+	width: 10%;
 }
 
 .campaign-tag {
@@ -48,10 +64,77 @@ hr {
 }
 
 .site-signup {
-	background: url(../img/background.png) repeat;
+	background: url(../img/background.png) no-repeat;
+	background-size: cover;
+}
+
+.blood-tube {
+	img {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+	}
+}
+
+.wpcf7 {
+	font-family: acumin-pro-extra-condensed, sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	max-width: none;
+
+	.wpcf7-form label {
+		font-size: 20px;
+
+	}
+
+	label.acceptance-link {
+		width: auto;
+	}
+
+	.form-control, input[type=text], input[type=search], input[type=url], input[type=tel], input[type=number], input[type=range], input[type=date], input[type=month], input[type=week], input[type=time], input[type=datetime], input[type=datetime-local], input[type=color], input[type=email], input[type=file], input[type=submit], select, textarea, .wpcf7-validation-errors {
+		background-color: transparent;
+		border: 2px solid #fff;
+		border-radius: 0;
+		margin-bottom: 20px;
+	}
+
+	.signup-submit {
+		background-color: $primary !important;
+		border: none !important;
+		color: #fff !important;
+		text-transform: uppercase !important;
+
+		&:hover {
+			background-color: #fff !important;
+			border: 1px solid $primary !important;
+			color: $primary !important;
+		}
+	}
+
+	span .wpcf7-not-valid {
+		border: 2px solid $primary !important;
+	}
+
+	span.wpcf7-not-valid-tip {
+		display: none;
+	}
+}
+
+.hidden-fancybox {
+	display: none;
+	max-width: 70%;
+
+	p {
+		font-size: 16px;
+		font-weight: 500;
+	}
 }
 
 .signup-footer {
+	font-family: acumin-pro-condensed, sans-serif;
+	font-style: normal;
+	font-weight: 500;
 	font-size: 0.875em; //14px
 	text-align: right;
 

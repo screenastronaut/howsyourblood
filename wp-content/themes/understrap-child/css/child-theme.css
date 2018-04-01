@@ -5,6 +5,8 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+@import url("https://use.typekit.net/qil2ina.css");
+@import url("https://use.typekit.net/bjf8xds.css");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -10165,20 +10167,40 @@ a.skip-link {
 .gallery-caption {
   display: block; }
 
+body {
+  font-family: acumin-pro-condensed, sans-serif;
+  font-style: normal;
+  font-weight: 800; }
+
 h1, h2, h3, h4, h5, h6 {
+  font-family: acumin-pro-condensed, sans-serif;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 0.8;
   text-transform: uppercase; }
 
 h1 {
   color: #c33b47;
-  font-size: 6.25em; }
+  font-size: 100px;
+  margin-bottom: 30px; }
 
 h2 {
-  font-size: 4.5em; }
+  font-size: 44px; }
+
+p {
+  font-size: 24px;
+  line-height: 1.2; }
+
+a {
+  color: #c33b47;
+  text-decoration: underline; }
+  a:hover {
+    text-decoration: none; }
 
 hr {
   background: #c33b47;
   height: 1px;
-  margin: 0;
+  margin: 30px 0;
   width: 10%; }
 
 .campaign-tag {
@@ -10192,9 +10214,71 @@ hr {
   margin: 0 30px; }
 
 .site-signup {
-  background: url(../img/background.png) repeat; }
+  background: url(../img/background.png) no-repeat;
+  background-size: cover; }
+
+.blood-tube img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto; }
+
+.wpcf7 {
+  font-family: acumin-pro-extra-condensed, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  max-width: none; }
+  .wpcf7 .wpcf7-form label {
+    font-size: 20px; }
+  .wpcf7 label.acceptance-link {
+    width: auto; }
+  .wpcf7 .form-control, .wpcf7 input[type=text],
+  .wpcf7 input[type=search],
+  .wpcf7 input[type=url],
+  .wpcf7 input[type=tel],
+  .wpcf7 input[type=number],
+  .wpcf7 input[type=range],
+  .wpcf7 input[type=date],
+  .wpcf7 input[type=month],
+  .wpcf7 input[type=week],
+  .wpcf7 input[type=time],
+  .wpcf7 input[type=datetime],
+  .wpcf7 input[type=datetime-local],
+  .wpcf7 input[type=color],
+  .wpcf7 input[type=email],
+  .wpcf7 input[type=file],
+  .wpcf7 input[type=submit],
+  .wpcf7 select,
+  .wpcf7 textarea, .wpcf7 .wpcf7-validation-errors, .wpcf7 input[type=text], .wpcf7 input[type=search], .wpcf7 input[type=url], .wpcf7 input[type=tel], .wpcf7 input[type=number], .wpcf7 input[type=range], .wpcf7 input[type=date], .wpcf7 input[type=month], .wpcf7 input[type=week], .wpcf7 input[type=time], .wpcf7 input[type=datetime], .wpcf7 input[type=datetime-local], .wpcf7 input[type=color], .wpcf7 input[type=email], .wpcf7 input[type=file], .wpcf7 input[type=submit], .wpcf7 select, .wpcf7 textarea, .wpcf7 .wpcf7-validation-errors {
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 0;
+    margin-bottom: 20px; }
+  .wpcf7 .signup-submit {
+    background-color: #c33b47 !important;
+    border: none !important;
+    color: #fff !important;
+    text-transform: uppercase !important; }
+    .wpcf7 .signup-submit:hover {
+      background-color: #fff !important;
+      border: 1px solid #c33b47 !important;
+      color: #c33b47 !important; }
+  .wpcf7 span .wpcf7-not-valid {
+    border: 2px solid #c33b47 !important; }
+  .wpcf7 span.wpcf7-not-valid-tip {
+    display: none; }
+
+.hidden-fancybox {
+  display: none;
+  max-width: 70%; }
+  .hidden-fancybox p {
+    font-size: 16px;
+    font-weight: 500; }
 
 .signup-footer {
+  font-family: acumin-pro-condensed, sans-serif;
+  font-style: normal;
+  font-weight: 500;
   font-size: 0.875em;
   text-align: right; }
   .signup-footer span {

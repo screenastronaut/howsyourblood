@@ -17,17 +17,21 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 		<div class="row">
 
-			<main class="site-main col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-12" id="main">
+			<main class="site-main col-xl-9 col-lg-9 col-md-9 col-sm-9 col-xs-12" id="main">
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<?php the_content(); ?>
 
+					<div id="tnc" class="hidden-fancybox"><?php echo get_field('tnc'); ?></div>
+					<div id="hcp" class="hidden-fancybox"><?php echo get_field('hcp'); ?></div>
+					<div id="pdpa" class="hidden-fancybox"><?php echo get_field('pdpa'); ?></div>
+
 				<?php endwhile; // end of the loop. ?>
 
 			</main><!-- #main -->
 
-			<div class="blood-tube col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12">
+			<div class="blood-tube col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-12">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/blood-tube.png" alt="">
 			</div>
 
