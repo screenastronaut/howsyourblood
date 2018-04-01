@@ -17,7 +17,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 		<div class="row">
 
-			<main class="site-main col-xl-9 col-lg-9 col-md-9 col-sm-9 col-xs-12" id="main">
+			<main class="site-main col-xl-9 col-lg-9 col-md-12 col-sm-12 col-xs-12" id="main">
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
@@ -31,7 +31,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 			</main><!-- #main -->
 
-			<div class="blood-tube col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-12">
+			<div class="blood-tube col-xl-3 col-lg-3 d-none d-lg-block">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/blood-tube.png" alt="">
 			</div>
 

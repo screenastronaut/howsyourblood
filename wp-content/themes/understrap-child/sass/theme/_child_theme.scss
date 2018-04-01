@@ -142,3 +142,10 @@ hr {
 		vertical-align: bottom;
 	}
 }
+
+@media (max-width: 768px) {
+	.site-signup {
+		background: url(../img/background-mobile.png) no-repeat;
+		background-size: cover;
+	}
+}
