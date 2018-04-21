@@ -46,6 +46,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="row">
 					<div class="col">
 						<h1 class="page-title"><?php the_title(); ?></h1>
+						<?php if(is_page('resources')) : ?>
+							<div class="center" style="margin-bottom:30px">
+								<span>For more information about Hepatitis C, here's a list of resources that you can refer to.</span>
+							</div>
+						<?php endif; ?>
 					</div>
 				</div>
 				<div class="row">
