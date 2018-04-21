@@ -10168,6 +10168,7 @@ a.skip-link {
   display: block; }
 
 body {
+  border: 10px solid #c33b47;
   font-family: acumin-pro-condensed, sans-serif;
   font-style: normal;
   font-weight: 800; }
@@ -10210,9 +10211,42 @@ hr {
 .wrapper {
   padding: 60px 0; }
 
-.logo {
-  margin: 0 30px; }
+.logo img {
+  margin: 30px 0;
+  width: 100px; }
 
+.site-header .page-title {
+  text-align: center; }
+.site-header .navbar a {
+  border: 2px solid #c33b47;
+  color: #000;
+  font-size: 13px;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: uppercase; }
+  .site-header .navbar a:hover {
+    color: #c33b47; }
+.site-header .navbar li {
+  margin: 0 10px; }
+  .site-header .navbar li.active a {
+    color: #c33b47; }
+.site-header .hcp-cta {
+  position: absolute;
+  top: 0;
+  right: 10%; }
+  .site-header .hcp-cta img {
+    width: 120px; }
+
+.site-footer span {
+  float: right;
+  font-size: 10px;
+  font-weight: normal;
+  padding: 15px 0;
+  text-align: right; }
+
+/*
+Old Phase 1
+*/
 .site-signup {
   background: url(../img/background.png) no-repeat;
   background-size: cover; }
@@ -10229,7 +10263,7 @@ hr {
   font-weight: 600;
   max-width: none; }
   .wpcf7 .wpcf7-form label {
-    font-size: 20px; }
+    font-size: 19px; }
   .wpcf7 label.acceptance-link {
     width: auto; }
   .wpcf7 .form-control, .wpcf7 input[type=text],

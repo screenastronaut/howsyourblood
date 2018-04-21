@@ -21,12 +21,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<div class="col-md-12">
 
-				<footer class="site-footer signup-footer" id="colophon">
+				<footer class="site-footer" id="colophon">
 
 					<div class="site-info">
 
-						<span>&copy;Copyright <?php echo date('Y'); ?> All rights reserved by Hepatitis Free Malaysia.</span>
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" class="logo" alt="Hepatitis Free Malaysia logo">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/hfm-logo.png" class="logo" alt="Hepatitis Free Malaysia logo">
+						<span>&copy;Copyright 2017. All rights reserved by Hepatitis Free Malaysia.</span>
+						<!-- <span>&copy;Copyright <?php echo date('Y'); ?> All rights reserved by Hepatitis Free Malaysia.</span> -->
+						
 
 					</div><!-- .site-info -->
 

@@ -4,6 +4,7 @@
 @import url("https://use.typekit.net/bjf8xds.css"); 
 
 body {
+	border: 10px solid $primary;
 	font-family: acumin-pro-condensed, sans-serif;
 	font-style: normal;
 	font-weight: 800;
@@ -60,8 +61,69 @@ hr {
 }
 
 .logo {
-	margin: 0 30px;
+	img {
+		margin: 30px 0;
+		width: 100px;
+	}
 }
+
+.site-header {
+	// height: 180px;
+	// padding: 50px 0;
+
+	.page-title {
+		text-align: center;
+	}
+
+	.navbar {
+		a {
+			border: 2px solid $primary;
+			color: $black;
+			font-size: 13px;
+			font-weight: normal;
+			text-decoration: none;
+			text-transform: uppercase;
+
+			&:hover {
+				color: $primary;
+			}
+		}
+
+		li {
+			margin: 0 10px;
+
+			&.active {
+				a {
+					color: $primary;
+				}
+			}
+		}
+	}
+
+	.hcp-cta {
+		position: absolute;
+		top: 0;
+		right: 10%;
+
+		img {
+			width: 120px;
+		}
+	}
+}
+
+.site-footer {
+	span {
+		float: right;
+		font-size: 10px;
+		font-weight: normal;
+		padding: 15px 0;
+		text-align: right;
+	}
+}
+
+/*
+Old Phase 1
+*/
 
 .site-signup {
 	background: url(../img/background.png) no-repeat;
@@ -84,7 +146,7 @@ hr {
 	max-width: none;
 
 	.wpcf7-form label {
-		font-size: 20px;
+		font-size: 19px;
 
 	}
 
