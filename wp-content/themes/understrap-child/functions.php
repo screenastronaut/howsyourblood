@@ -1,4 +1,7 @@
 <?php
+update_option('siteurl','http://www.howsyourblood.com/');
+update_option('home','http://www.howsyourblood.com/');
+
 function understrap_remove_scripts() {
     wp_dequeue_style( 'understrap-styles' );
     wp_deregister_style( 'understrap-styles' );

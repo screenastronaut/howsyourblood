@@ -54,14 +54,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</div>
 				</div>
 				<div class="row">
-					<div class="col">		
-						<nav class="navbar navbar-expand-md">					
+					<div class="col">	
+						<nav class="navbar navbar-expand-md">			
 							<?php wp_nav_menu(
 								array(
 									'theme_location'  => 'primary',
 									'container_class' => 'navbar-collapse justify-content-center',
 									'container_id'    => 'navbarNavDropdown',
-									'menu_class'      => 'navbar-nav',
+									'menu_class'      => 'navbar-nav nav-fill w-100',
 									'fallback_cb'     => '',
 									'menu_id'         => 'main-menu',
 									'walker'          => new understrap_WP_Bootstrap_Navwalker(),

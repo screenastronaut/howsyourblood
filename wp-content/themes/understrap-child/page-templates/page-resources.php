@@ -22,7 +22,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					if(have_rows('organizations')) : 
 						$count = 0;
 						while(have_rows('organizations')) : the_row(); ?>
-						<div class="col-3 <?php if($count===4) echo "offset-3"; ?>">
+						<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-6 <?php if($count===4) echo "offset-xl-3 offset-lg-3 offset-md-3"; ?>">
 							<h4><?php echo get_sub_field('name'); ?></h4>
 							<div class="org-logo">
 								<img src="<?php echo get_sub_field('logo');?>" alt="<?php echo get_sub_field('name'); ?>'s logo">
