@@ -15,30 +15,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="wrapper-footer">
 
-	<div class="<?php echo esc_attr( $container ); ?>">
+	<footer class="site-footer <?php echo esc_attr( $container ); ?>" id="colophon">
 
 		<div class="row">
 
-			<div class="col-md-12">
-
-				<footer class="site-footer" id="colophon">
-
-					<div class="site-info">
-
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/hfm-logo.png" class="logo" alt="Hepatitis Free Malaysia logo">
-						<span>&copy;Copyright 2017. All rights reserved by Hepatitis Free Malaysia.</span>
-						<!-- <span>&copy;Copyright <?php echo date('Y'); ?> All rights reserved by Hepatitis Free Malaysia.</span> -->
-						
-
-					</div><!-- .site-info -->
-
-				</footer><!-- #colophon -->
-
-			</div><!--col end -->
+			<div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/hfm-logo.png" class="logo" alt="Hepatitis Free Malaysia logo">
+			</div>
+			<div class="offset-xl-6 offset-lg-6 offset-md-6 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+				<span>&copy;Copyright 2017. All rights reserved by Hepatitis Free Malaysia.</span>
+			</div>
 
 		</div><!-- row end -->
 
-	</div><!-- container end -->
+	</footer><!-- container end -->
 
 </div><!-- wrapper end -->
 

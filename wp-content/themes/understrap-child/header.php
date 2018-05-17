@@ -39,44 +39,55 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class="hfeed site" id="page">
 
 		<header class="site-header container">
-			<a class="logo" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/hyb-logo.png" title="How's Your Blood Logo" alt="How's Your Blood Logo">
-			</a>
-			<div class="container">
-				<div class="row">
-					<div class="col">
-						<h1 class="page-title"><?php the_title(); ?></h1>
+			<div class="row">
+				<div class="col-lg-2">
+					<a class="logo" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/hyb-logo.png" title="How's Your Blood Logo" alt="How's Your Blood Logo">
+					</a>
+					<div class="below-logo-text">You're currently viewing the Healthcare Professional section. For general information, click <a href="coming-soon">here</a>.</div>
+				</div>
+				<div class="offset-lg-1 col-lg-8">
+					<div class="header-small">You are currently viewing: HCP pages.</div>
+					<nav class="navbar navbar-expand-md">			
+						<?php wp_nav_menu(
+							array(
+								'theme_location'  => 'primary',
+								'container_class' => 'navbar-collapse justify-content-center',
+								'container_id'    => 'navbarNavDropdown',
+								'menu_class'      => 'navbar-nav nav-fill w-100',
+								'fallback_cb'     => '',
+								'menu_id'         => 'main-menu',
+								'walker'          => new understrap_WP_Bootstrap_Navwalker(),
+							)
+						); 
+						?>
+					</nav>
+				</div>
+			</div>
+			<div class="hcp-cta">
+				<a href="#">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/hcp-cta.png" alt="Be a Partner Today">
+				</a>
+			</div>
+		</header>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col">
+					<?php if(is_front_page()) : ?>
+						<h1 class="page-title center"><?php the_title(); ?></h1>
+						<?php else: ?>
+							<div class="center bg-image">
+								<div style="background: url('<?php echo get_stylesheet_directory_uri(); ?>/img/cover-photo.jpg'); background-size: cover;height:275px">
+									<h1 class="page-title"><?php the_title(); ?></h1>
+								</div>
+							</div>
+						<?php endif; ?>
+
 						<?php if(is_page('resources')) : ?>
 							<div class="center" style="margin-bottom:30px">
 								<span>For more information about Hepatitis C, here's a list of resources that you can refer to.</span>
 							</div>
 						<?php endif; ?>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col">	
-						<nav class="navbar navbar-expand-md">			
-							<?php wp_nav_menu(
-								array(
-									'theme_location'  => 'primary',
-									'container_class' => 'navbar-collapse justify-content-center',
-									'container_id'    => 'navbarNavDropdown',
-									'menu_class'      => 'navbar-nav nav-fill w-100',
-									'fallback_cb'     => '',
-									'menu_id'         => 'main-menu',
-									'walker'          => new understrap_WP_Bootstrap_Navwalker(),
-								)
-							); 
-							?>
-						</nav>
-					</div>
-				</div>
+				</div>			
 			</div>
-
-			<div class="hcp-cta">
-				<a href="#">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/hcp-cta.png" alt="Be a Partner Today">
-				</a>
-			</div>
-
-		</header>

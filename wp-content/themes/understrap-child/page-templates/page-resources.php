@@ -23,17 +23,16 @@ $container = get_theme_mod( 'understrap_container_type' );
 						$count = 0;
 						while(have_rows('organizations')) : the_row(); ?>
 						<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-6 <?php if($count===4) echo "offset-xl-3 offset-lg-3 offset-md-3"; ?>">
-							<h4><?php echo get_sub_field('name'); ?></h4>
 							<div class="org-logo">
-								<img src="<?php echo get_sub_field('logo');?>" alt="<?php echo get_sub_field('name'); ?>'s logo">
+								<a href="<?php echo get_sub_field('subtext'); ?>" target="_blank"><img src="<?php echo get_sub_field('logo');?>" alt="<?php echo get_sub_field('name'); ?>'s logo"></a>
 							</div>
-							<div><?php echo get_sub_field('subtext'); ?></div>
+							<h4><?php echo get_sub_field('name'); ?></h4>
 						</div>
 					<?php $count++; endwhile; endif; ?>
 				</div>
 
 				<div class="row">
-					<div class="offset-2 col-8">
+					<div class="entry-content offset-2 col-8">
 						
 					<?php while ( have_posts() ) : the_post(); ?>
 

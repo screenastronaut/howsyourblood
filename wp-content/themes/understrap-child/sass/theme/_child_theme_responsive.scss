@@ -27,7 +27,7 @@
 
 @media (max-width: 768px) {
 	h1 {
-		font-size: 60px;
+		font-size: 48px;
 	}
 
 	.site-header .navbar a {
@@ -43,6 +43,18 @@
 
 	.welcome-bg {
 		height: 500px !important;
+	}
+
+	.site-footer {
+		.col-sm-12, .col-xs-12 {
+			margin: 0 auto;
+			text-align: center;
+
+			span {
+				float: none;
+				line-height: 5;
+			}
+		}
 	}
 }
 
