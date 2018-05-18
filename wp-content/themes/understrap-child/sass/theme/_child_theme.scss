@@ -4,10 +4,17 @@
 @import url("https://use.typekit.net/bjf8xds.css"); 
 
 body {
-	border: 10px solid $primary;
 	font-family: acumin-pro-condensed, sans-serif;
 	font-style: normal;
 	font-weight: 500;
+}
+
+body.red-theme {
+	border: 10px solid $primary;
+}
+
+body.blue-theme {
+	border: 10px solid $secondary;
 }
 
 h1, h2, h3, h4, h5, h6 {

@@ -8,6 +8,14 @@
  */
 
 $container = get_theme_mod( 'understrap_container_type' );
+
+if(is_page('hepc') || is_page('about-hepc') || is_page('hepc-faqs') || is_page('hepc-quiz')) {
+	$page_class = 'blue-theme';
+	$theme = 'hepc';
+} else {
+	$page_class = 'red-theme';
+	$theme = 'hcp';
+}
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -34,7 +42,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class($page_class); ?>>
 
 	<div class="hfeed site" id="page">
 
@@ -47,19 +55,40 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="below-logo-text">You're currently viewing the Healthcare Professional section. For general information, click <a href="coming-soon">here</a>.</div>
 				</div>
 				<div class="offset-lg-1 col-lg-8">
-					<div class="header-small">You are currently viewing: HCP pages.</div>
+					<?php 
+					if($theme === 'hcp') :
+						echo '<div class="header-small">You are currently viewing: HCP pages.</div>';
+					else :
+						echo '<div class="header-small">You are currently viewing: HECP pages.</div>';
+					endif;
+					?>
 					<nav class="navbar navbar-expand-md">			
-						<?php wp_nav_menu(
-							array(
-								'theme_location'  => 'primary',
-								'container_class' => 'navbar-collapse justify-content-center',
-								'container_id'    => 'navbarNavDropdown',
-								'menu_class'      => 'navbar-nav nav-fill w-100',
-								'fallback_cb'     => '',
-								'menu_id'         => 'main-menu',
-								'walker'          => new understrap_WP_Bootstrap_Navwalker(),
-							)
-						); 
+						<?php 
+						if($theme === 'hcp') :
+							wp_nav_menu(
+								array(
+									'theme_location'  => 'primary',
+									'container_class' => 'navbar-collapse justify-content-center',
+									'container_id'    => 'navbarNavDropdown',
+									'menu_class'      => 'navbar-nav ml-auto',
+									'fallback_cb'     => '',
+									'menu_id'         => 'main-menu',
+									'walker'          => new understrap_WP_Bootstrap_Navwalker(),
+								)
+							);
+						else :
+							wp_nav_menu(
+								array(
+									'theme_location'  => 'hecp',
+									'container_class' => 'navbar-collapse justify-content-center',
+									'container_id'    => 'navbarNavDropdown',
+									'menu_class'      => 'navbar-nav ml-auto',
+									'fallback_cb'     => '',
+									'menu_id'         => 'main-menu',
+									'walker'          => new understrap_WP_Bootstrap_Navwalker(),
+								)
+							);
+						endif;
 						?>
 					</nav>
 				</div>
@@ -73,21 +102,22 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col">
-					<?php if(is_front_page()) : ?>
+					<?php if(is_front_page() && ($theme === 'hcp')) { ?>
 						<h1 class="page-title center"><?php the_title(); ?></h1>
-						<?php else: ?>
-							<div class="center bg-image">
-								<div style="background: url('<?php echo get_stylesheet_directory_uri(); ?>/img/cover-photo.jpg'); background-size: cover;height:275px">
-									<h1 class="page-title"><?php the_title(); ?></h1>
-								</div>
+					<?php } else if ($theme === 'hcp') { ?>
+						<div class="center bg-image">
+							<div style="background: url('<?php echo get_stylesheet_directory_uri(); ?>/img/cover-photo.jpg'); background-size: cover;height:275px">
+								<h1 class="page-title"><?php the_title(); ?></h1>
 							</div>
-						<?php endif; ?>
+						</div>
+					<?php } ?>
 
-						<?php if(is_page('resources')) : ?>
-							<div class="center" style="margin-bottom:30px">
-								<span>For more information about Hepatitis C, here's a list of resources that you can refer to.</span>
-							</div>
-						<?php endif; ?>
-					</div>
-				</div>			
-			</div>
+					<?php if(is_page('resources')) : ?>
+						<div class="center" style="margin-bottom:30px">
+							<span>For more information about Hepatitis C, here's a list of resources that you can refer to.</span>
+						</div>
+					<?php endif; ?>
+
+				</div>
+			</div>			
+		</div>
