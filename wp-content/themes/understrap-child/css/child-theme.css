@@ -10177,6 +10177,8 @@ body.red-theme {
 
 body.blue-theme {
   border: 10px solid #47c9f4; }
+  body.blue-theme h1 {
+    line-height: 1; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: acumin-pro-condensed, sans-serif;
@@ -10188,6 +10190,8 @@ h1 {
   color: #c33b47;
   font-size: 70px;
   margin-bottom: 30px; }
+  h1 span.blue {
+    color: #47c9f4; }
 
 h2 {
   color: #c33b47;
@@ -10231,8 +10235,18 @@ hr {
   padding: 0; }
 
 .logo img {
-  margin: 30px 0;
+  margin: 20px 0;
   width: 100px; }
+
+.hepc-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 10; }
+  .hepc-header .hcp-cta {
+    right: 0 !important;
+    top: -10px !important; }
 
 .site-header .page-title {
   text-align: center; }
@@ -10242,7 +10256,7 @@ hr {
   padding-top: 30px;
   text-align: right; }
 .site-header .navbar {
-  padding: 30px 0; }
+  padding: 0; }
   .site-header .navbar a {
     color: #000;
     font-size: 12px;
@@ -10263,8 +10277,7 @@ hr {
     width: 100px; }
 
 .below-logo-text {
-  font-size: 12px;
-  width: 100px; }
+  font-size: 12px; }
 
 .site-footer {
   margin-top: 30px;
@@ -10297,6 +10310,9 @@ Page Content
   width: 100%; }
   .bg-image h1 {
     padding-top: 80px; }
+
+.indent-left {
+  margin-left: 30px; }
 
 .entry-content .welcome-bg {
   height: 400px;

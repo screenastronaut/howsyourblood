@@ -15,6 +15,10 @@ body.red-theme {
 
 body.blue-theme {
 	border: 10px solid $secondary;
+
+	h1 {
+		line-height: 1;
+	}
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -29,6 +33,10 @@ h1 {
 	color: $primary;
 	font-size: 70px;
 	margin-bottom: 30px;
+
+	span.blue {
+		color: $secondary;
+	}
 }
 
 h2 {
@@ -92,8 +100,21 @@ hr {
 
 .logo {
 	img {
-		margin: 30px 0;
+		margin: 20px 0;
 		width: 100px;
+	}
+}
+
+.hepc-header {
+	position: fixed;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 10;
+
+	.hcp-cta {
+		right: 0 !important;
+		top: -10px !important;
 	}
 }
 
@@ -113,7 +134,7 @@ hr {
 	}
 
 	.navbar {
-		padding: 30px 0;
+		padding: 0;
 
 		a {
 			// border: 2px solid $primary;
@@ -156,7 +177,7 @@ hr {
 
 .below-logo-text {
 	font-size: 12px;
-	width: 100px;
+	// width: 100px;
 }
 
 .site-footer {
@@ -201,6 +222,10 @@ Page Content
 		// line-height: 275px;
 		padding-top: 80px;
 	}
+}
+
+.indent-left {
+	margin-left: 30px;
 }
 
 .entry-content {

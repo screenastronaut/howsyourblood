@@ -46,78 +46,93 @@ if(is_page('hepc') || is_page('about-hepc') || is_page('hepc-faqs') || is_page('
 
 	<div class="hfeed site" id="page">
 
-		<header class="site-header container">
+		<header class="<?=$theme?>-header site-header container">
 			<div class="row">
 				<div class="col-lg-2">
-					<a class="logo" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/hyb-logo.png" title="How's Your Blood Logo" alt="How's Your Blood Logo">
-					</a>
-					<div class="below-logo-text">You're currently viewing the Healthcare Professional section. For general information, click <a href="coming-soon">here</a>.</div>
-				</div>
-				<div class="offset-lg-1 col-lg-8">
-					<?php 
-					if($theme === 'hcp') :
-						echo '<div class="header-small">You are currently viewing: HCP pages.</div>';
-					else :
-						echo '<div class="header-small">You are currently viewing: HECP pages.</div>';
-					endif;
-					?>
-					<nav class="navbar navbar-expand-md">			
+					<?php if($theme === 'hcp') : ?>
+						<a class="logo" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/hyb-logo.png" title="How's Your Blood Logo" alt="How's Your Blood Logo">
+						</a>
+						<!-- <div class="below-logo-text">You're currently viewing the Healthcare Professional section. For general information, click <a href="coming-soon">here</a>.</div> -->
+						<?php else : ?>
+						<a class="logo" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/newhyb-logo.png" title="How's Your Blood Logo" alt="How's Your Blood Logo">
+						</a>
+						<!-- <div class="below-logo-text">You're currently viewing the Healthcare Professional section. For general information, click <a href="coming-soon">here</a>.</div> -->
+						<?php endif; ?>
+					</div>
+					<div class="offset-lg-1 col-lg-8">
 						<?php 
 						if($theme === 'hcp') :
-							wp_nav_menu(
-								array(
-									'theme_location'  => 'primary',
-									'container_class' => 'navbar-collapse justify-content-center',
-									'container_id'    => 'navbarNavDropdown',
-									'menu_class'      => 'navbar-nav ml-auto',
-									'fallback_cb'     => '',
-									'menu_id'         => 'main-menu',
-									'walker'          => new understrap_WP_Bootstrap_Navwalker(),
-								)
-							);
+							echo '<div class="header-small">You\'re currently viewing the Healthcare Professional section. For general information, click <a href="coming-soon">here</a>.</div>';
 						else :
-							wp_nav_menu(
-								array(
-									'theme_location'  => 'hecp',
-									'container_class' => 'navbar-collapse justify-content-center',
-									'container_id'    => 'navbarNavDropdown',
-									'menu_class'      => 'navbar-nav ml-auto',
-									'fallback_cb'     => '',
-									'menu_id'         => 'main-menu',
-									'walker'          => new understrap_WP_Bootstrap_Navwalker(),
-								)
-							);
+							echo '<div class="header-small">You\'re currently viewing the Healthcare Professional section. For general information, click <a href="coming-soon">here</a>.</div>';
 						endif;
 						?>
-					</nav>
+						<nav class="navbar navbar-expand-md">			
+							<?php 
+							if($theme === 'hcp') :
+								wp_nav_menu(
+									array(
+										'theme_location'  => 'primary',
+										'container_class' => 'navbar-collapse justify-content-center',
+										'container_id'    => 'navbarNavDropdown',
+										'menu_class'      => 'navbar-nav ml-auto',
+										'fallback_cb'     => '',
+										'menu_id'         => 'main-menu',
+										'walker'          => new understrap_WP_Bootstrap_Navwalker(),
+									)
+								);
+							else :
+								wp_nav_menu(
+									array(
+										'theme_location'  => 'hecp',
+										'container_class' => 'navbar-collapse justify-content-center',
+										'container_id'    => 'navbarNavDropdown',
+										'menu_class'      => 'navbar-nav ml-auto',
+										'fallback_cb'     => '',
+										'menu_id'         => 'main-menu',
+										'walker'          => new understrap_WP_Bootstrap_Navwalker(),
+									)
+								);
+							endif;
+							?>
+						</nav>
+					</div>
 				</div>
-			</div>
-			<div class="hcp-cta">
-				<a href="#">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/hcp-cta.png" alt="Be a Partner Today">
-				</a>
-			</div>
-		</header>
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col">
-					<?php if(is_front_page() && ($theme === 'hcp')) { ?>
-						<h1 class="page-title center"><?php the_title(); ?></h1>
-					<?php } else if ($theme === 'hcp') { ?>
-						<div class="center bg-image">
-							<div style="background: url('<?php echo get_stylesheet_directory_uri(); ?>/img/cover-photo.jpg'); background-size: cover;height:275px">
-								<h1 class="page-title"><?php the_title(); ?></h1>
-							</div>
-						</div>
+				<div class="hcp-cta">
+					<?php if($theme === 'hcp') { ?>
+						<a href="#">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/hcp-cta.png" alt="Be a Partner Today">
+						</a>
+					<?php } else { ?>
+						<a href="../hepc-quiz">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/hepc-cta.png" alt="Take this Hepatitis C Checklist">
+						</a>
 					<?php } ?>
-
-					<?php if(is_page('resources')) : ?>
-						<div class="center" style="margin-bottom:30px">
-							<span>For more information about Hepatitis C, here's a list of resources that you can refer to.</span>
-						</div>
-					<?php endif; ?>
-
 				</div>
-			</div>			
-		</div>
+			</header>
+			<?php if($theme === 'hcp') : ?>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col">
+							<?php if(is_front_page()) { ?>
+								<h1 class="page-title center"><?php the_title(); ?></h1>
+							<?php } else { ?>
+								<div class="center bg-image">
+									<div style="background: url('<?php echo get_stylesheet_directory_uri(); ?>/img/cover-photo.jpg'); background-size: cover;height:275px">
+										<h1 class="page-title"><?php the_title(); ?></h1>
+									</div>
+								</div>
+							<?php } ?>
+
+							<?php if(is_page('resources')) : ?>
+								<div class="center" style="margin-bottom:30px">
+									<span>For more information about Hepatitis C, here's a list of resources that you can refer to.</span>
+								</div>
+							<?php endif; ?>
+
+						</div>
+					</div>			
+				</div>
+				<?php endif; ?>
