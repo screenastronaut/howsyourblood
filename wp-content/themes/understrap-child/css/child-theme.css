@@ -10434,6 +10434,27 @@ Page Content
       margin: 0 5px;
       width: 30px; }
 
+.checklist-quiz p {
+  font-weight: 700; }
+.checklist-quiz input[type="radio"] {
+  margin-left: 30px; }
+.checklist-quiz label {
+  color: #c33b47;
+  font-weight: 700;
+  margin-left: 10px; }
+.checklist-quiz .cta-link {
+  margin-top: 30px; }
+
+.checklist-result {
+  display: none; }
+  .checklist-result .high-risk,
+  .checklist-result .low-risk {
+    display: none; }
+  .checklist-result p.results {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 30px; }
+
 /*
 Old Phase 1
 */

@@ -21,4 +21,22 @@ jQuery(document).ready(function($) {
 			$('.location-row[data-state="' + state + '"]').show();
 		}
 	});
+
+	$('#checklist-submit').on('click', function() {
+		if($('fieldset:not(:has(:radio:checked))').length) {
+			alert('Please answer all questions on the checklist.');
+		} else {
+			var yescount = $('.yes-check:radio:checked').length;
+			if(yescount > 2) {
+				$('.checklist-quiz').hide();
+				$('.checklist-result').show();
+				$('.high-risk').show();
+			} else {
+				$('.checklist-quiz').hide();
+				$('.checklist-result').show();
+				$('.low-risk').show();
+			}
+			$('html, body').animate({scrollTop:0}, 'fast');
+		}
+	});
 });

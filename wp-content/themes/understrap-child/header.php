@@ -11,10 +11,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 global $theme;
 
-if(is_page('hepc') || is_page('about-hepc') || is_page('hepc-quiz')) {
+if(is_page('hepc') || is_page('about-hepc')) {
 	$page_class = 'blue-theme';
 	$theme = 'hepc';
-} elseif(is_page('hepc-faqs') || is_page('hepc-locations')) {
+} elseif(is_page('hepc-faqs') || is_page('hepc-locations') || is_page('hepc-checklist')) {
 	$page_class = 'blue-theme';
 	$theme = 'no';
 } else {
