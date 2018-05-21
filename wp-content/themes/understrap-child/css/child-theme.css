@@ -10406,6 +10406,34 @@ Page Content
     margin-left: 30px;
     padding: 10px 0; }
 
+.location-state {
+  border: 1px solid #47c9f4;
+  color: #c33b47;
+  font-weight: 700;
+  margin: 20px 0;
+  padding: 10px;
+  width: 100%; }
+
+.location-container {
+  border: 1px solid #47c9f4;
+  padding: 10px 20px; }
+  .location-container .location-row {
+    border-bottom: 1px solid #c33b47;
+    padding: 10px 0; }
+    .location-container .location-row .location-name {
+      color: #c33b47;
+      font-size: 20px;
+      font-weight: 700; }
+    .location-container .location-row .location-hours {
+      color: #a8a8a8;
+      margin-left: 10px; }
+    .location-container .location-row .location-title {
+      color: #c33b47;
+      font-weight: 700; }
+    .location-container .location-row img {
+      margin: 0 5px;
+      width: 30px; }
+
 /*
 Old Phase 1
 */

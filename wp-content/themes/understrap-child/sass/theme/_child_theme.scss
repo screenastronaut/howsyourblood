@@ -369,6 +369,46 @@ Page Content
 	}
 }
 
+.location-state {
+	border: 1px solid $secondary;
+	color: $primary;
+	font-weight: 700;
+	margin: 20px 0;
+	padding: 10px;
+	width: 100%;
+}
+
+.location-container {
+	border: 1px solid $secondary;
+	padding: 10px 20px;
+
+	.location-row {
+		border-bottom: 1px solid $primary;
+		padding: 10px 0;
+
+		.location-name {
+			color: $primary;
+			font-size: 20px;
+			font-weight: 700;
+		}
+
+		.location-hours {
+			color: $grey;
+			margin-left: 10px;
+		}
+
+		.location-title {
+			color: $primary;
+			font-weight: 700;
+		}
+
+		img {
+			margin: 0 5px;
+			width: 30px;
+		}
+	}
+}
+
 /*
 Old Phase 1
 */

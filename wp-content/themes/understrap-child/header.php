@@ -14,7 +14,7 @@ global $theme;
 if(is_page('hepc') || is_page('about-hepc') || is_page('hepc-quiz')) {
 	$page_class = 'blue-theme';
 	$theme = 'hepc';
-} elseif(is_page('hepc-faqs')) {
+} elseif(is_page('hepc-faqs') || is_page('hepc-locations')) {
 	$page_class = 'blue-theme';
 	$theme = 'no';
 } else {
