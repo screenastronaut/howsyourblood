@@ -10255,7 +10255,6 @@ hr {
   margin: auto;
   z-index: 10; }
   .hepc-header .hcp-cta {
-    right: 0 !important;
     top: -10px !important; }
 
 .hepc-footer {
@@ -10538,15 +10537,20 @@ Old Phase 1
     position: relative;
     margin-top: 100px; } }
 @media (max-width: 768px) {
+  body.blue-theme h1,
   h1 {
     font-size: 48px; }
 
-  .site-header .navbar a {
-    height: 56px; }
+  .hepc-header .hcp-cta {
+    right: 3% !important; }
 
   .resources h4 {
     height: 80px; } }
 @media (max-width: 767px) {
+  .site-header .navbar li {
+    border: 1px solid lightgrey;
+    text-align: center; }
+
   .welcome-bg {
     height: 500px !important; }
 

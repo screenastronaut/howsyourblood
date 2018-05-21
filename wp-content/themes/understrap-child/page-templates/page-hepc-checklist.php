@@ -26,7 +26,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						</div>
 					</div>
 					<div class="row">
-						<div class="offset-lg-2 col-lg-8">
+						<div class="offset-2 col-8">
 
 							<?php if(have_rows('checklist')) :
 								$count = 1;
@@ -48,7 +48,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<div class="checklist-result container">
 							<div class="low-risk">
 								<div class="row">
-									<div class="offset-lg-2 col-lg-8 center">
+									<div class="offset-2 col-8 center">
 										<h1>Checklist Results</h1>
 										<p>Should you get tested for Hep C?</p>
 
@@ -58,7 +58,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							</div>
 							<div class="high-risk">
 								<div class="row">
-									<div class="offset-lg-2 col-lg-8 center">
+									<div class="offset-2 col-8 center">
 										<h1>Checklist Results</h1>
 										<p>Should you get tested for Hep C?</p>
 
@@ -67,18 +67,18 @@ $container = get_theme_mod( 'understrap_container_type' );
 								</div>
 							</div>
 							<div class="row">
-								<div class="offset-lg-2 col-lg-8 center">
+								<div class="offset-2 col-8 center">
 									<h2>Congratulations</h2>
 									<p>Here's a promo code for your next Hepatitis C test!</p>
 								</div>
 							</div>
 							<div class="row">
-								<div class="offset-lg-1 col-lg-10 center">
+								<div class="offset-1 col-10 center">
 									<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/blood-vial-free.jpg" alt="">
 								</div>
 							</div>
 							<div class="row">								
-								<div class="offset-lg-2 col-lg-8 center">
+								<div class="offset-2 col-8 center">
 									<p>Mention or present this code as you sign up for your test at any partnering locations.</p>
 									<div class="center">
 										<a class="cta-link" href="../hepc-locations">Locate Nearest</a>

@@ -20,8 +20,10 @@ global $theme;
 			<?php while ( have_posts() ) : the_post(); ?>
 				<div class="container">
 					<div class="row">
-						<h1 class="center">FAQs</h1>
-						<div class="faq-container offset-lg-1 col-10">
+						<div class="col">
+							<h1 class="center">FAQs</h1>
+						</div>
+						<div class="faq-container offset-1 col-10">
 							<ol>
 								<?php if(have_rows('faq')) :
 									while(have_rows('faq')) : the_row(); ?>

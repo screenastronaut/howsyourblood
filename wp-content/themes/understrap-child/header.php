@@ -53,7 +53,7 @@ if(is_page('hepc') || is_page('about-hepc')) {
 
 		<header class="<?=$theme?>-header site-header container">
 			<div class="row">
-				<div class="col-lg-2">
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
 					<?php if($theme === 'hcp') : ?>
 						<a class="logo" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/hyb-logo.png" title="How's Your Blood Logo" alt="How's Your Blood Logo">
@@ -66,7 +66,7 @@ if(is_page('hepc') || is_page('about-hepc')) {
 						<!-- <div class="below-logo-text">You're currently viewing the Healthcare Professional section. For general information, click <a href="coming-soon">here</a>.</div> -->
 						<?php endif; ?>
 					</div>
-					<div class="offset-lg-1 col-lg-8">
+					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
 						<?php 
 						if($theme === 'hcp') :
 							echo '<div class="header-small">You\'re currently viewing the Healthcare Professional section. For general information, click <a href="coming-soon">here</a>.</div>';
@@ -111,7 +111,7 @@ if(is_page('hepc') || is_page('about-hepc')) {
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/hcp-cta.png" alt="Be a Partner Today">
 						</a>
 					<?php } else { ?>
-						<a href="../hepc-quiz">
+						<a href="../hepc-checklist">
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/hepc-cta.png" alt="Take this Hepatitis C Checklist">
 						</a>
 					<?php } ?>

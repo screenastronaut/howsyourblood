@@ -21,7 +21,7 @@ global $theme;
 				<div class="container">
 					<div class="row">
 						<div class="col-12"><h1 class="center">Locations</h1></div>
-						<div class="offset-lg-2 col-8">
+						<div class="offset-2 col-8">
 							<select name="state" id="state" class="location-state">
 								<option value="all" default>Select Your State:</option>
 								<option value="Johor">Johor</option>
@@ -43,7 +43,7 @@ global $theme;
 						</div>
 					</div>
 					<div class="row">
-						<div class="location-container offset-lg-2 col-8">
+						<div class="location-container offset-2 col-8">
 							<?php if(have_rows('locations')) :
 								while(have_rows('locations')) : the_row(); ?>
 									<div class="location-row container-fluid" data-state="<?php the_sub_field('state'); ?>">

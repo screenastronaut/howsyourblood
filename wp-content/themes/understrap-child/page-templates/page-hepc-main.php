@@ -21,7 +21,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="section">
 						<div class="container">
 							<div class="row">
-								<div class="offset-md-1 col-10">
+								<div class="offset-1 col-10">
 									<?php the_field('first_section'); ?>
 								</div>								
 							</div>
@@ -30,7 +30,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="section">
 						<div class="container">
 							<div class="row">
-								<div class="offset-md-1 col-10">
+								<div class="offset-1 col-10">
 									<?php the_field('second_section'); ?>
 								</div>
 							</div>
@@ -39,7 +39,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="section">
 						<div class="container">
 							<div class="row">
-								<div class="offset-md-1 col-10">
+								<div class="offset-1 col-10">
 									<?php the_field('third_section'); ?>
 								</div>
 							</div>
@@ -48,12 +48,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="section">
 						<div class="container">
 							<div class="row">
-								<div class="offset-md-1 col-10">
+								<div class="offset-1 col-10">
 									<?php the_field('fourth_section'); ?>
 								</div>
 							</div>
 							<div class="row">
-								<div class="offset-md-2 col-8">
+								<div class="offset-2 col-8">
 									<p style="margin:0;text-align:center"><strong>References</strong></p>
 									<ol style="font-size: 12px;">
 										<li>Stanaway et al, The global burden of viral hepatitis from 1990 to 2013: findings from the Global Burden of Disease Study 2013, Vol 388, 1081-88, Lancet, July 2016.</li>
