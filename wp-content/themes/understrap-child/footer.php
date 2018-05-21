@@ -7,6 +7,7 @@
  * @package understrap
  */
 
+global $theme;
 $the_theme = wp_get_theme();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
@@ -15,7 +16,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="wrapper-footer">
 
-	<footer class="site-footer <?php echo esc_attr( $container ); ?>" id="colophon">
+	<footer class="<?=$theme?>-footer site-footer <?php echo esc_attr( $container ); ?>" id="colophon">
 
 		<div class="row">
 

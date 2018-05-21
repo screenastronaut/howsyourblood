@@ -9,9 +9,14 @@
 
 $container = get_theme_mod( 'understrap_container_type' );
 
-if(is_page('hepc') || is_page('about-hepc') || is_page('hepc-faqs') || is_page('hepc-quiz')) {
+global $theme;
+
+if(is_page('hepc') || is_page('about-hepc') || is_page('hepc-quiz')) {
 	$page_class = 'blue-theme';
 	$theme = 'hepc';
+} elseif(is_page('hepc-faqs')) {
+	$page_class = 'blue-theme';
+	$theme = 'no';
 } else {
 	$page_class = 'red-theme';
 	$theme = 'hcp';
