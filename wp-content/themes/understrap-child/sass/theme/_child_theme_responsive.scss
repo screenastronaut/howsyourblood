@@ -2,7 +2,13 @@
 // Responsive: Utility classes
 // --------------------------------------------------
 
-@media (min-width: 1441px) { //dekstop
+@media (min-width: 1900px) {
+	.container {
+		max-width: 1600px; 
+	}
+}
+
+@media (min-width: 1441px) { //desktop
 }
 
 @media (max-width: 1367px) {

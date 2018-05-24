@@ -10169,8 +10169,10 @@ a.skip-link {
 
 body {
   font-family: acumin-pro-condensed, sans-serif;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 500; }
+  font-weight: 500;
+  line-height: 1.25; }
 
 body.red-theme {
   border: 10px solid #c33b47; }
@@ -10193,36 +10195,32 @@ body.blue-theme {
 h1, h2, h3, h4, h5, h6 {
   font-family: acumin-pro-condensed, sans-serif;
   font-weight: 800;
-  line-height: 1.2;
-  text-transform: uppercase; }
+  line-height: 1.25;
+  margin-bottom: 18px;
+  margin-top: 36px; }
   h1 span.blue, h2 span.blue, h3 span.blue, h4 span.blue, h5 span.blue, h6 span.blue {
     color: #47c9f4; }
 
 h1 {
   color: #c33b47;
-  font-size: 70px;
-  margin-bottom: 30px; }
+  font-size: 54px;
+  text-transform: uppercase; }
 
 h2 {
   color: #c33b47;
-  font-size: 36px;
-  margin-bottom: 0.3em; }
+  font-size: 45px;
+  text-transform: uppercase; }
 
 h3 {
   color: #c33b47;
-  font-size: 28px;
-  line-height: 38px;
-  margin-bottom: 0.3em; }
+  font-size: 23.94px; }
 
 h4 {
-  font-size: 18px;
-  text-align: center;
+  font-size: 21.6px;
   text-transform: unset; }
 
 p {
-  font-size: 16px;
-  line-height: 1.2;
-  margin-bottom: 15px; }
+  margin-bottom: 9px; }
 
 a {
   color: #c33b47;
@@ -10234,12 +10232,14 @@ hr {
   height: 1px;
   margin: 30px 0; }
 
-.campaign-tag {
-  color: #c33b47; }
-
 .center {
-  margin: 30px auto;
   text-align: center; }
+
+.margin-30 {
+  margin: 30px auto; }
+
+.margin-60 {
+  margin: 60px auto; }
 
 .wrapper {
   padding: 0; }
@@ -10257,33 +10257,35 @@ hr {
   margin-top: 0;
   z-index: 10; }
 
-.site-header .page-title {
-  text-align: center; }
-.site-header .header-small {
-  font-size: 12px;
-  padding-right: 0.5rem;
-  padding-top: 30px;
-  text-align: right; }
-.site-header .navbar {
-  padding: 0; }
-  .site-header .navbar a {
-    color: #000;
-    font-size: 12px;
-    font-weight: 800;
-    text-decoration: none;
-    text-transform: uppercase; }
-    .site-header .navbar a:hover {
+.site-header {
+  height: 135px; }
+  .site-header .page-title {
+    text-align: center; }
+  .site-header .header-small {
+    font-size: 13.986px;
+    padding-right: 0.5rem;
+    padding-top: 30px;
+    text-align: right; }
+  .site-header .navbar {
+    padding: 0; }
+    .site-header .navbar a {
+      color: #000;
+      font-size: 13.986px;
+      font-weight: 800;
+      text-decoration: none;
+      text-transform: uppercase; }
+      .site-header .navbar a:hover {
+        color: #c33b47; }
+    .site-header .navbar li:not(:last-child) {
+      border-right: 1px solid lightgrey; }
+    .site-header .navbar li.active a {
       color: #c33b47; }
-  .site-header .navbar li:not(:last-child) {
-    border-right: 1px solid lightgrey; }
-  .site-header .navbar li.active a {
-    color: #c33b47; }
-.site-header .hcp-cta {
-  text-align: right; }
-  .site-header .hcp-cta img {
-    margin-top: -10px;
-    width: 75%;
-    z-index: 99; }
+  .site-header .hcp-cta {
+    text-align: right; }
+    .site-header .hcp-cta img {
+      margin-top: -10px;
+      width: 75%;
+      z-index: 99; }
 
 .floating-cta {
   background: url(../img/blood-vial-only.png) #47c9f4 no-repeat center;
@@ -10293,7 +10295,8 @@ hr {
   position: fixed;
   bottom: 5%;
   right: 3%;
-  transition: border-radius 0.5s, width 0.5s, height 0.5s; }
+  transition: border-radius 0.5s, width 0.5s, height 0.5s;
+  z-index: 99; }
   .floating-cta:hover {
     background: url(../img/floating-cta.png) #47c9f4 no-repeat center;
     border-radius: 10px;
@@ -10322,7 +10325,8 @@ Page Content
 
 .cta-link {
   border: 2px solid #c33b47;
-  margin-top: 30px;
+  display: inline-block;
+  font-weight: 800;
   padding: 10px 50px;
   text-align: center;
   text-decoration: none;
@@ -10342,11 +10346,10 @@ Page Content
 
 .entry-content .welcome-bg {
   height: 400px;
-  margin-bottom: 60px;
+  margin-bottom: 18px;
   padding: 30px 0;
   text-align: center; }
 .entry-content ul li {
-  font-size: 16px;
   list-style-image: none;
   list-style-type: disc; }
 .entry-content .first-level > li {
@@ -10552,6 +10555,9 @@ Old Phase 1
   .blood-tube.d-md-block img {
     position: relative;
     margin-top: 100px; } }
+@media (min-width: 1900px) {
+  .container {
+    max-width: 1600px; } }
 @media (max-width: 768px) {
   body.blue-theme h1,
   h1 {

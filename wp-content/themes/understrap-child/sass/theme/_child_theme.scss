@@ -5,8 +5,10 @@
 
 body {
 	font-family: acumin-pro-condensed, sans-serif;
+	font-size: $base-font-size;
 	font-style: normal;
 	font-weight: 500;
+	line-height: $base-line-height;
 }
 
 body.red-theme {
@@ -41,10 +43,10 @@ body.blue-theme {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: acumin-pro-condensed, sans-serif;
-	// font-style: italic;
 	font-weight: 800;
-	line-height: 1.2;
-	text-transform: uppercase;
+	line-height: $base-line-height;
+	margin-bottom: $base-font-size;
+	margin-top: $base-font-size*2;
 
 	span.blue {
 		color: $secondary;
@@ -53,34 +55,28 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
 	color: $primary;
-	font-size: 70px;
-	margin-bottom: 30px;
+	font-size: $base-font-size*3;
+	text-transform: uppercase;
 }
 
 h2 {
 	color: $primary;
-	font-size: 36px;
-	margin-bottom: 0.3em;
+	font-size: $base-font-size*2.5;
+	text-transform: uppercase;
 }
 
 h3 {
 	color: $primary;
-	font-size: 28px;
-	line-height: 38px;
-	margin-bottom: 0.3em;
+	font-size: $base-font-size*1.33;
 }
 
 h4 {
-	font-size: 18px;
-	// font-style: italic;
-	text-align: center;
+	font-size: $base-font-size*1.2;
 	text-transform: unset;
 }
 
 p {
-	font-size: 16px;
-	line-height: 1.2;
-	margin-bottom: 15px;
+	margin-bottom: $base-font-size*0.5;
 }
 
 a {
@@ -99,14 +95,17 @@ hr {
 	// width: 10%;
 }
 
-.campaign-tag {
-	color: $primary;
-	// font-style: italic;
+.center {
+	// margin: 30px auto;
+	text-align: center;
 }
 
-.center {
+.margin-30 {
 	margin: 30px auto;
-	text-align: center;
+}
+
+.margin-60 {
+	margin: 60px auto;
 }
 
 // Website
@@ -131,116 +130,115 @@ hr {
 	// z-index: 10;
 
 	// .hcp-cta {
-	// 	// right: 0 !important;
-	// 	top: -10px !important;
-	// }
-}
-
-.hepc-footer {
-	bottom: 0;
-	position: fixed;
-	left: 0;
-	right: 0;
-	margin: auto;
-	margin-top: 0;
-	z-index: 10;
-}
-
-.site-header {
-	// height: 180px;
-	// padding: 50px 0;
-
-	.page-title {
-		text-align: center;
+		// 	// right: 0 !important;
+		// 	top: -10px !important;
+		// }
 	}
 
-	.header-small {
-		font-size: 12px;
-		padding-right: 0.5rem;
-		padding-top: 30px;
-		text-align: right;
+	.hepc-footer {
+		bottom: 0;
+		position: fixed;
+		left: 0;
+		right: 0;
+		margin: auto;
+		margin-top: 0;
+		z-index: 10;
 	}
 
-	.navbar {
-		padding: 0;
+	.site-header {
+		height: 135px;
 
-		a {
-			// border: 2px solid $primary;
-			color: $black;
-			font-size: 12px;
-			font-weight: 800;
-			text-decoration: none;
-			text-transform: uppercase;
-
-			&:hover {
-				color: $primary;
-			}
+		.page-title {
+			text-align: center;
 		}
 
-		li {
-			// margin: 0 10px;
+		.header-small {
+			font-size: $base-font-size*0.777;
+			padding-right: 0.5rem;
+			padding-top: 30px;
+			text-align: right;
+		}
 
-			&:not(:last-child) {
-				border-right: 1px solid lightgrey;
-			}
+		.navbar {
+			padding: 0;
 
-			&.active {
-				a {
+			a {
+				color: $black;
+				font-size: $base-font-size*0.777;
+				font-weight: 800;
+				text-decoration: none;
+				text-transform: uppercase;
+
+				&:hover {
 					color: $primary;
 				}
 			}
+
+			li {
+				// margin: 0 10px;
+
+				&:not(:last-child) {
+					border-right: 1px solid lightgrey;
+				}
+
+				&.active {
+					a {
+						color: $primary;
+					}
+				}
+			}
+		}
+
+		.hcp-cta {
+			text-align: right;
+
+			img {
+				margin-top: -10px;
+				width: 75%;
+				z-index: 99;
+			}
 		}
 	}
 
-	.hcp-cta {
-		text-align: right;
+	.floating-cta {
+		background: url(../img/blood-vial-only.png) #47c9f4 no-repeat center;
+		border-radius: 50%;
+		height: 80px;
+		width: 80px;
+		position: fixed;
+		bottom: 5%;
+		right: 3%;
+		transition: border-radius 0.5s, width 0.5s, height 0.5s;
+		z-index: 99;
+
+		&:hover {
+			background: url(../img/floating-cta.png) #47c9f4 no-repeat center;
+			border-radius: 10px;
+			height: 88px;
+			width: 145px;
+		}
+	}
+
+	.below-logo-text {
+		font-size: 12px;
+		// width: 100px;
+	}
+
+	.site-footer {
+		margin-top: 30px;
+		margin-bottom: 30px;
 
 		img {
-			margin-top: -10px;
-			width: 75%;
-			z-index: 99;
+			height: 50px;
+		}
+
+		span {
+			float: right;
+			font-size: 12px;
+			padding: 15px 0;
+			text-align: right;
 		}
 	}
-}
-
-.floating-cta {
-	background: url(../img/blood-vial-only.png) #47c9f4 no-repeat center;
-	border-radius: 50%;
-	height: 80px;
-	width: 80px;
-	position: fixed;
-	bottom: 5%;
-	right: 3%;
-	transition: border-radius 0.5s, width 0.5s, height 0.5s;
-
-	&:hover {
-		background: url(../img/floating-cta.png) #47c9f4 no-repeat center;
-		border-radius: 10px;
-		height: 88px;
-		width: 145px;
-	}
-}
-
-.below-logo-text {
-	font-size: 12px;
-	// width: 100px;
-}
-
-.site-footer {
-	margin-top: 30px;
-	margin-bottom: 30px;
-
-	img {
-		height: 50px;
-	}
-	
-	span {
-		float: right;
-		font-size: 12px;
-		padding: 15px 0;
-		text-align: right;
-	}
-}
 
 /*
 Page Content
@@ -251,8 +249,8 @@ Page Content
 
 .cta-link {
 	border: 2px solid $primary;
-	// font-style: italic;
-	margin-top: 30px;
+	display: inline-block;
+	font-weight: 800;
 	padding: 10px 50px;
 	text-align: center;
 	text-decoration: none;
@@ -282,21 +280,18 @@ Page Content
 
 	.welcome-bg {
 		height: 400px;
-		margin-bottom: 60px;
+		margin-bottom: $base-font-size;
 		padding: 30px 0;
 		text-align: center;
 	}
 
 	ul li {
-		font-size: 16px;
-		// font-style: italic;
 		list-style-image: none;
 		list-style-type: disc;
 	}
 
 	.first-level > li {
 		font-size: 20px;
-		// list-style-image: url(../img/bullet.png);
 		list-style-type: none;
 
 		&:before {
