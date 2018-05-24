@@ -10222,7 +10222,7 @@ h4 {
 p {
   font-size: 16px;
   line-height: 1.2;
-  margin-bottom: 25px; }
+  margin-bottom: 15px; }
 
 a {
   color: #c33b47;
@@ -10247,15 +10247,6 @@ hr {
 .logo img {
   margin: 20px 0;
   width: 100px; }
-
-.hepc-header {
-  position: fixed;
-  left: 0;
-  right: 0;
-  margin: auto;
-  z-index: 10; }
-  .hepc-header .hcp-cta {
-    top: -10px !important; }
 
 .hepc-footer {
   bottom: 0;
@@ -10288,11 +10279,26 @@ hr {
   .site-header .navbar li.active a {
     color: #c33b47; }
 .site-header .hcp-cta {
-  position: absolute;
-  top: 0;
-  right: 7%; }
+  text-align: right; }
   .site-header .hcp-cta img {
-    width: 100px; }
+    margin-top: -10px;
+    width: 75%;
+    z-index: 99; }
+
+.floating-cta {
+  background: url(../img/blood-vial-only.png) #47c9f4 no-repeat center;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  position: fixed;
+  bottom: 5%;
+  right: 3%;
+  transition: border-radius 0.5s, width 0.5s, height 0.5s; }
+  .floating-cta:hover {
+    background: url(../img/floating-cta.png) #47c9f4 no-repeat center;
+    border-radius: 10px;
+    height: 88px;
+    width: 145px; }
 
 .below-logo-text {
   font-size: 12px; }
@@ -10334,6 +10340,7 @@ Page Content
 
 .entry-content .welcome-bg {
   height: 400px;
+  margin-bottom: 60px;
   padding: 30px 0;
   text-align: center; }
 .entry-content ul li {
@@ -10359,8 +10366,8 @@ Page Content
   margin-bottom: 30px; }
 .resources .org-logo {
   border: 2px solid #c33b47;
-  height: 100px;
-  line-height: 100px;
+  height: 150px;
+  line-height: 150px;
   margin-bottom: 30px;
   text-align: center;
   width: 100%; }

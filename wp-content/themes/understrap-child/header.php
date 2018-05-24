@@ -53,20 +53,20 @@ if(is_page('hepc') || is_page('about-hepc')) {
 
 		<header class="<?=$theme?>-header site-header container">
 			<div class="row">
-				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+				<div class="col-2">
 					<?php if($theme === 'hcp') : ?>
 						<a class="logo" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/hyb-logo.png" title="How's Your Blood Logo" alt="How's Your Blood Logo">
 						</a>
 						<!-- <div class="below-logo-text">You're currently viewing the Healthcare Professional section. For general information, click <a href="coming-soon">here</a>.</div> -->
 						<?php else : ?>
-						<a class="logo" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/newhyb-logo.png" title="How's Your Blood Logo" alt="How's Your Blood Logo">
-						</a>
-						<!-- <div class="below-logo-text">You're currently viewing the Healthcare Professional section. For general information, click <a href="coming-soon">here</a>.</div> -->
+							<a class="logo" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/newhyb-logo.png" title="How's Your Blood Logo" alt="How's Your Blood Logo">
+							</a>
+							<!-- <div class="below-logo-text">You're currently viewing the Healthcare Professional section. For general information, click <a href="coming-soon">here</a>.</div> -->
 						<?php endif; ?>
 					</div>
-					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+					<div class="col-8">
 						<?php 
 						if($theme === 'hcp') :
 							echo '<div class="header-small">You\'re currently viewing the Healthcare Professional section. For general information, click <a href="coming-soon">here</a>.</div>';
@@ -104,20 +104,21 @@ if(is_page('hepc') || is_page('about-hepc')) {
 							?>
 						</nav>
 					</div>
-				</div>
-				<div class="hcp-cta">
-					<?php if($theme === 'hcp') { ?>
-						<a href="#">
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/hcp-cta.png" alt="Be a Partner Today">
-						</a>
-					<?php } else { ?>
-						<a href="../hepc-checklist">
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/hepc-cta.png" alt="Take this Hepatitis C Checklist">
-						</a>
-					<?php } ?>
+					<div class="col-2 hcp-cta">
+						<?php if($theme === 'hcp') { ?>
+							<a href="<?php echo get_permalink(get_page_by_path('register')); ?>">
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/hcp-cta.png" alt="Be a Partner Today">
+							</a>
+						<?php } else { ?>
+							<a href="<?php echo get_permalink(get_page_by_path('hepc-checklist')); ?>">
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/hepc-cta.png" alt="Take this Hepatitis C Checklist">
+							</a>
+						<?php } ?>
+					</div>
 				</div>
 			</header>
 			<?php if($theme === 'hcp') : ?>
+				<a href="<?php echo get_permalink(get_page_by_path('register')); ?>"><div class="floating-cta"></div></a>
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col">
@@ -140,4 +141,6 @@ if(is_page('hepc') || is_page('about-hepc')) {
 						</div>
 					</div>			
 				</div>
-				<?php endif; ?>
+				<?php else : ?>
+					<a href="<?php echo get_permalink(get_page_by_path('hepc-checklist')); ?>"><div class="floating-cta"></div></a>
+					<?php endif; ?>
