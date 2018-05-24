@@ -10306,6 +10306,8 @@ hr {
 .site-footer {
   margin-top: 30px;
   margin-bottom: 30px; }
+  .site-footer img {
+    height: 50px; }
   .site-footer span {
     float: right;
     font-size: 12px;
@@ -10349,7 +10351,14 @@ Page Content
   list-style-type: disc; }
 .entry-content .first-level > li {
   font-size: 20px;
-  list-style-image: url(../img/bullet.png); }
+  list-style-type: none; }
+  .entry-content .first-level > li:before {
+    background: url(../img/bullet.png) no-repeat center;
+    background-size: contain;
+    content: '';
+    display: inline-block;
+    height: 20px;
+    width: 20px; }
 .entry-content .small-font p {
   font-size: 12px;
   margin-bottom: 10px; }
