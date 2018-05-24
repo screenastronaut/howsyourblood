@@ -42,6 +42,7 @@ body.blue-theme {
 }
 
 h1, h2, h3, h4, h5, h6 {
+	color: $primary;
 	font-family: acumin-pro-condensed, sans-serif;
 	font-weight: 800;
 	line-height: $base-line-height;
@@ -54,24 +55,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	color: $primary;
 	font-size: $base-font-size*3;
 	text-transform: uppercase;
 }
 
 h2 {
-	color: $primary;
 	font-size: $base-font-size*2.5;
 	text-transform: uppercase;
 }
 
 h3 {
-	color: $primary;
-	font-size: $base-font-size*1.33;
+	font-size: $base-font-size*2;
 }
 
 h4 {
-	font-size: $base-font-size*1.2;
+	font-size: $base-font-size*1.33;
+	line-height: 1.2;
+	margin-top: $base-font-size*1.33;
 	text-transform: unset;
 }
 
@@ -263,12 +263,12 @@ Page Content
 }
 
 .bg-image {
-	height:275px;
-	width:100%;
+	height: 275px;
+	margin-bottom: 30px;
+	width: 100%;
 
 	h1 {
-		// line-height: 275px;
-		padding-top: 80px;
+		line-height: 275px;
 	}
 }
 
@@ -288,14 +288,15 @@ Page Content
 	ul li {
 		list-style-image: none;
 		list-style-type: disc;
+		text-indent: 0;
 	}
 
 	.first-level > li {
-		font-size: 20px;
 		list-style-type: none;
+		text-indent: -20px;
 
 		&:before {
-			background: url(../img/bullet.png) no-repeat center;
+			background: url(../img/bullet.png) no-repeat left;
 			background-size: contain;
 			content: '';
 			display: inline-block;

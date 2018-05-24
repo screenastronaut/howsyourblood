@@ -10193,6 +10193,7 @@ body.blue-theme {
     font-size: 16px; }
 
 h1, h2, h3, h4, h5, h6 {
+  color: #c33b47;
   font-family: acumin-pro-condensed, sans-serif;
   font-weight: 800;
   line-height: 1.25;
@@ -10202,21 +10203,20 @@ h1, h2, h3, h4, h5, h6 {
     color: #47c9f4; }
 
 h1 {
-  color: #c33b47;
   font-size: 54px;
   text-transform: uppercase; }
 
 h2 {
-  color: #c33b47;
   font-size: 45px;
   text-transform: uppercase; }
 
 h3 {
-  color: #c33b47;
-  font-size: 23.94px; }
+  font-size: 36px; }
 
 h4 {
-  font-size: 21.6px;
+  font-size: 23.94px;
+  line-height: 1.2;
+  margin-top: 23.94px;
   text-transform: unset; }
 
 p {
@@ -10337,9 +10337,10 @@ Page Content
 
 .bg-image {
   height: 275px;
+  margin-bottom: 30px;
   width: 100%; }
   .bg-image h1 {
-    padding-top: 80px; }
+    line-height: 275px; }
 
 .indent-left {
   margin-left: 30px; }
@@ -10351,12 +10352,13 @@ Page Content
   text-align: center; }
 .entry-content ul li {
   list-style-image: none;
-  list-style-type: disc; }
+  list-style-type: disc;
+  text-indent: 0; }
 .entry-content .first-level > li {
-  font-size: 20px;
-  list-style-type: none; }
+  list-style-type: none;
+  text-indent: -20px; }
   .entry-content .first-level > li:before {
-    background: url(../img/bullet.png) no-repeat center;
+    background: url(../img/bullet.png) no-repeat left;
     background-size: contain;
     content: '';
     display: inline-block;
