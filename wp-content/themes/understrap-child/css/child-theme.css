@@ -10248,17 +10248,18 @@ hr {
   margin: 20px 0;
   width: 100px; }
 
-.hepc-footer {
-  bottom: 0;
-  position: fixed;
-  left: 0;
-  right: 0;
-  margin: auto;
-  margin-top: 0;
-  z-index: 10; }
+.hepc.floating-cta {
+  background: url(../img/blood-vial-only.png) #c33b47 no-repeat center; }
+  .hepc.floating-cta:hover {
+    background: url(../img/floating-cta-red.png) #c33b47 no-repeat center; }
+
+.hcp.floating-cta {
+  background: url(../img/blood-vial-only.png) #47c9f4 no-repeat center; }
+  .hcp.floating-cta:hover {
+    background: url(../img/floating-cta-blue.png) #47c9f4 no-repeat center; }
 
 .site-header {
-  height: 135px; }
+  height: 115px; }
   .site-header .page-title {
     text-align: center; }
   .site-header .header-small {
@@ -10287,8 +10288,13 @@ hr {
       width: 75%;
       z-index: 99; }
 
+.hepc-header {
+  background: white;
+  position: fixed;
+  width: 100%;
+  z-index: 9999; }
+
 .floating-cta {
-  background: url(../img/blood-vial-only.png) #47c9f4 no-repeat center;
   border-radius: 50%;
   height: 80px;
   width: 80px;
@@ -10298,7 +10304,6 @@ hr {
   transition: border-radius 0.5s, width 0.5s, height 0.5s;
   z-index: 99; }
   .floating-cta:hover {
-    background: url(../img/floating-cta.png) #47c9f4 no-repeat center;
     border-radius: 10px;
     height: 88px;
     width: 145px; }
@@ -10316,6 +10321,16 @@ hr {
     font-size: 12px;
     padding: 15px 0;
     text-align: right; }
+
+.hepc-footer {
+  background: white;
+  bottom: 15px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: 0;
+  z-index: 9999; }
 
 /*
 Page Content
@@ -10521,7 +10536,6 @@ Old Phase 1
   .wpcf7 select,
   .wpcf7 textarea, .wpcf7 .wpcf7-validation-errors, .wpcf7 input[type=text], .wpcf7 input[type=search], .wpcf7 input[type=url], .wpcf7 input[type=tel], .wpcf7 input[type=number], .wpcf7 input[type=range], .wpcf7 input[type=date], .wpcf7 input[type=month], .wpcf7 input[type=week], .wpcf7 input[type=time], .wpcf7 input[type=datetime], .wpcf7 input[type=datetime-local], .wpcf7 input[type=color], .wpcf7 input[type=email], .wpcf7 input[type=file], .wpcf7 input[type=submit], .wpcf7 select, .wpcf7 textarea, .wpcf7 .wpcf7-validation-errors {
     background-color: transparent;
-    border: 2px solid #fff;
     border-radius: 0;
     margin-bottom: 20px; }
   .wpcf7 .signup-submit {
