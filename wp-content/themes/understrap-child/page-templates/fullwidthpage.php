@@ -17,9 +17,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 	if(is_page('welcome')) : ?>
 		<div class="container-fluid">
 			<div class="row">
-				<div class="center">
+				<div class="col center">
 					<div style="background: url('<?php echo get_stylesheet_directory_uri(); ?>/img/cover-photo.jpg'); background-size: cover; padding: 30px 0">
-						<div class="offset-3 col-6">
+						<div class="offset-xl-3 offset-lg-2 offset-md-1 col-xl-6 col-lg-8 col-md-10 offset-0 col-12">
 							<?php the_field('title_text'); ?>
 						</div>
 					</div>

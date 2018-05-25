@@ -9,6 +9,42 @@
 }
 
 @media (min-width: 1441px) { //desktop
+
+	body {
+		font-size: $base-font-size*2;
+	}
+
+	h1 {
+		font-size: $base-font-size*5;
+	}
+
+	h2 {
+		font-size: $base-font-size*4.5;
+	}
+
+	h3 {
+		font-size: $base-font-size*3;
+	}
+
+	h4 {
+		font-size: $base-font-size*2.5;
+		margin-top: $base-font-size*2.5;
+	}
+
+	p {
+		font-size: $base-font-size*2;
+		margin-bottom: $base-font-size*0.5;
+	}	
+
+	.site-header {
+		height: 225px;
+	}
+
+	.site-header .header-small,
+	.site-header .navbar a,
+	.site-footer span {
+		font-size: $base-font-size;
+	}
 }
 
 @media (max-width: 1367px) {
@@ -32,17 +68,38 @@
 }
 
 @media (max-width: 768px) {
-	body.blue-theme h1,
-	h1 {
-		font-size: 48px;
+
+	body {
+		font-size: $base-font-size;
+		line-height: $base-line-height;
+
+		&.blue-theme h1 {
+			font-size: 48px;
+		}
+	}
+
+	.site-header {
+		.hcp-cta {
+			img {
+				width: 100%;
+			}
+		}
 	}
 
 	.hepc-header .hcp-cta {
 		right: 3% !important;
 	}
 
-	.site-header .navbar a {
-		// height: 56px;
+	.floating-cta {
+		background-size: 40%;
+		height: 50px;
+		width: 50px;
+
+		&:hover {
+			background-size: contain;
+			height: 44px;
+			width: 72px;
+		}
 	}
 
 	.resources h4 {
@@ -52,9 +109,35 @@
 
 @media (max-width: 767px) {
 
-	.site-header .navbar li {
-		border: 1px solid lightgrey;
-		text-align: center;
+	h1 {
+		font-size: $base-font-size*2.5;
+	}
+
+	h2 {
+		font-size: $base-font-size*2;
+	}
+
+	h3 {
+		font-size: $base-font-size*1.33;
+	}
+
+	h4 {
+		font-size: $base-font-size*1.11;
+		margin-top: $base-font-size*1.11;
+	}
+
+	p {
+		margin-bottom: $base-font-size*0.5;
+	}
+
+	.site-header {
+		height: 350px;
+		margin-bottom: 10px;
+
+		.navbar li {
+			border: 1px solid lightgrey;
+			text-align: center;
+		}
 	}
 
 	.welcome-bg {

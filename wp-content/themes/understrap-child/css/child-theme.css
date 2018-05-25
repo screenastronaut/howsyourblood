@@ -10262,7 +10262,7 @@ hr {
   .site-header .page-title {
     text-align: center; }
   .site-header .header-small {
-    font-size: 13.986px;
+    font-size: 12.996px;
     padding-right: 0.5rem;
     padding-top: 30px;
     text-align: right; }
@@ -10270,7 +10270,7 @@ hr {
     padding: 0; }
     .site-header .navbar a {
       color: #000;
-      font-size: 13.986px;
+      font-size: 12.996px;
       font-weight: 800;
       text-decoration: none;
       text-transform: uppercase; }
@@ -10339,8 +10339,12 @@ Page Content
   height: 275px;
   margin-bottom: 30px;
   width: 100%; }
-  .bg-image h1 {
-    line-height: 275px; }
+  .bg-image div {
+    display: flex;
+    flex-direction: column;
+    height: 275px;
+    justify-content: center;
+    margin-top: 30px; }
 
 .indent-left {
   margin-left: 30px; }
@@ -10376,13 +10380,14 @@ Page Content
 .resources .col-3 {
   margin-bottom: 30px; }
 .resources h4 {
-  height: 60px;
-  margin-bottom: 30px; }
+  color: black;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  text-align: center; }
 .resources .org-logo {
   border: 2px solid #c33b47;
   height: 150px;
   line-height: 150px;
-  margin-bottom: 30px;
   text-align: center;
   width: 100%; }
 
@@ -10560,20 +10565,81 @@ Old Phase 1
 @media (min-width: 1900px) {
   .container {
     max-width: 1600px; } }
-@media (max-width: 768px) {
-  body.blue-theme h1,
+@media (min-width: 1441px) {
+  body {
+    font-size: 36px; }
+
   h1 {
-    font-size: 48px; }
+    font-size: 90px; }
+
+  h2 {
+    font-size: 81px; }
+
+  h3 {
+    font-size: 54px; }
+
+  h4 {
+    font-size: 45px;
+    margin-top: 45px; }
+
+  p {
+    font-size: 36px;
+    margin-bottom: 9px; }
+
+  .site-header {
+    height: 225px; }
+
+  .site-header .header-small,
+  .site-header .navbar a,
+  .site-footer span {
+    font-size: 18px; } }
+@media (max-width: 768px) {
+  body {
+    font-size: 18px;
+    line-height: 1.25; }
+    body.blue-theme h1 {
+      font-size: 48px; }
+
+  .site-header .hcp-cta img {
+    width: 100%; }
 
   .hepc-header .hcp-cta {
     right: 3% !important; }
 
+  .floating-cta {
+    background-size: 40%;
+    height: 50px;
+    width: 50px; }
+    .floating-cta:hover {
+      background-size: contain;
+      height: 44px;
+      width: 72px; }
+
   .resources h4 {
     height: 80px; } }
 @media (max-width: 767px) {
-  .site-header .navbar li {
-    border: 1px solid lightgrey;
-    text-align: center; }
+  h1 {
+    font-size: 45px; }
+
+  h2 {
+    font-size: 36px; }
+
+  h3 {
+    font-size: 23.94px; }
+
+  h4 {
+    font-size: 19.98px;
+    margin-top: 19.98px; }
+
+  p {
+    margin-bottom: 9px; }
+
+  .site-header {
+    height: 350px;
+    margin-bottom: 10px; }
+    .site-header .navbar li {
+      border: 1px solid lightgrey;
+      text-align: center; }
 
   .welcome-bg {
     height: 500px !important; }
