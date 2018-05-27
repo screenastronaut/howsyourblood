@@ -10189,8 +10189,6 @@ body.blue-theme {
     font-size: 23px; }
   body.blue-theme p {
     margin-bottom: 10px; }
-  body.blue-theme .entry-content ul.first-level > li {
-    font-size: 16px; }
 
 h1, h2, h3, h4, h5, h6 {
   color: #c33b47;
@@ -10221,6 +10219,8 @@ h4 {
 
 p {
   margin-bottom: 9px; }
+  p.grey-text {
+    color: #a8a8a8; }
 
 a {
   color: #c33b47;
@@ -10291,7 +10291,7 @@ hr {
 .hepc-header {
   background: white;
   position: fixed;
-  width: 100%;
+  width: calc(100% - 20px);
   z-index: 9999; }
 
 .floating-cta {
@@ -10302,7 +10302,7 @@ hr {
   bottom: 5%;
   right: 3%;
   transition: border-radius 0.5s, width 0.5s, height 0.5s;
-  z-index: 99; }
+  z-index: 99999; }
   .floating-cta:hover {
     border-radius: 10px;
     height: 88px;
@@ -10315,7 +10315,7 @@ hr {
   margin-top: 30px;
   margin-bottom: 30px; }
   .site-footer img {
-    height: 50px; }
+    width: 55%; }
   .site-footer span {
     float: right;
     font-size: 12px;
@@ -10324,7 +10324,7 @@ hr {
 
 .hepc-footer {
   background: white;
-  bottom: 15px;
+  bottom: 20px;
   position: fixed;
   left: 0;
   right: 0;
@@ -10417,7 +10417,7 @@ Page Content
       counter-increment: li;
       padding: 10px 0; }
       .faq-container ol .faq-question > li::before {
-        content: "0" counter(li) ") ";
+        content: counter(li) ") ";
         color: #c33b47;
         display: inline-block;
         width: 1em;
@@ -10456,7 +10456,7 @@ Page Content
 
 .location-container {
   border: 1px solid #47c9f4;
-  padding: 10px 20px; }
+  padding: 10px 20px 25px; }
   .location-container .location-row {
     border-bottom: 1px solid #c33b47;
     padding: 10px 0; }

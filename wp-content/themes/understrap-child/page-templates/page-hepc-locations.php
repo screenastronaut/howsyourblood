@@ -20,7 +20,7 @@ global $theme;
 			<?php while ( have_posts() ) : the_post(); ?>
 				<div class="container">
 					<div class="row">
-						<div class="col-12"><h1 class="center">Locations</h1></div>
+						<div class="col-12"><h1 class="center">Screening Locations</h1></div>
 						<div class="offset-2 col-8">
 							<select name="state" id="state" class="location-state">
 								<option value="all" default>Select Your State:</option>

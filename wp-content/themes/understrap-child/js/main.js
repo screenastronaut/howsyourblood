@@ -6,10 +6,15 @@ jQuery(document).ready(function($) {
 	});
 
 	$('.faq-question').on('click', function() {
-		$('.faq-answer').hide();
-		$('.faq-question li').removeClass('hover');
-		$(this).find('.faq-answer').show();
-		$(this).find('li').addClass('hover');
+		if($(this).find('li').hasClass('hover')) {
+			$('.faq-answer').hide();
+			$('.faq-question li').removeClass('hover');
+		} else {
+			$('.faq-answer').hide();
+			$('.faq-question li').removeClass('hover');
+			$(this).find('.faq-answer').show();
+			$(this).find('li').addClass('hover');
+		}
 	});
 
 	$('.location-state').change(function() {

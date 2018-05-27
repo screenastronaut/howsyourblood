@@ -14,7 +14,7 @@ global $theme;
 if(is_page('hepc') || is_page('about-hepc')) {
 	$page_class = 'blue-theme';
 	$theme = 'hepc';
-} elseif(is_page('hepc-faqs') || is_page('hepc-locations') || is_page('hepc-checklist')) {
+} elseif(is_page('hepc-faqs') || is_page('hepc-locations') || is_page('hepc-checklist') || is_page('hepc-diagnosed')) {
 	$page_class = 'blue-theme';
 	$theme = 'no';
 } else {
@@ -121,7 +121,7 @@ if(is_page('hepc') || is_page('about-hepc')) {
 							if($theme === 'hcp') :
 								echo '<div class="header-small">You\'re currently viewing the Healthcare Professional section. For general information, click <a href="'.get_permalink(get_page_by_path('hepc')).'">here</a>.</div>';
 							else :
-								echo '<div class="header-small">You\'re currently viewing the Healthcare Professional section. For general information, click <a href="coming-soon">here</a>.</div>';
+								echo '<div class="header-small">You\'re currently viewing the general section. For healthcare professionals, click <a href="\">here</a>.</div>';
 							endif;
 							?>
 							<nav class="navbar navbar-expand-md">			
@@ -187,7 +187,7 @@ if(is_page('hepc') || is_page('about-hepc')) {
 				</div>			
 			</div>
 			<?php else : ?>
-				<a href="<?php echo get_permalink(get_page_by_path('hepc-checklist')); ?>">
+				<!-- <a href="<?php echo get_permalink(get_page_by_path('hepc-checklist')); ?>">
 					<div class="<?=$theme?> floating-cta"></div>
-				</a>
+				</a> -->
 				<?php endif; ?>

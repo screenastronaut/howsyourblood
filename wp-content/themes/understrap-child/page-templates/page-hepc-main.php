@@ -21,7 +21,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="section">
 						<div class="container">
 							<div class="row">
-								<div class="offset-1 col-10">
+								<div class="col-12">
 									<?php the_field('first_section'); ?>
 								</div>								
 							</div>
@@ -30,7 +30,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="section">
 						<div class="container">
 							<div class="row">
-								<div class="offset-1 col-10">
+								<div class="col-12">
 									<?php the_field('second_section'); ?>
 								</div>
 							</div>
@@ -39,7 +39,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="section">
 						<div class="container">
 							<div class="row">
-								<div class="offset-1 col-10">
+								<div class="col-12">
 									<?php the_field('third_section'); ?>
 								</div>
 							</div>
@@ -48,7 +48,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="section">
 						<div class="container">
 							<div class="row">
-								<div class="offset-1 col-10">
+								<div class="col-12">
 									<?php the_field('fourth_section'); ?>
 								</div>
 							</div>

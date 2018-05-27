@@ -35,10 +35,6 @@ body.blue-theme {
 	p {
 		margin-bottom: 10px;
 	}
-
-	.entry-content ul.first-level > li {
-		font-size: 16px;
-	}
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -77,6 +73,10 @@ h4 {
 
 p {
 	margin-bottom: $base-font-size*0.5;
+
+	&.grey-text {
+		color: $grey;
+	}
 }
 
 a {
@@ -164,8 +164,6 @@ hr {
 		}
 
 		li {
-			// margin: 0 10px;
-
 			&:not(:last-child) {
 				border-right: 1px solid lightgrey;
 			}
@@ -192,7 +190,7 @@ hr {
 .hepc-header {
 	background: white;
 	position: fixed;
-	width: 100%;
+	width: calc(100% - 20px);
 	z-index: 9999;
 }
 
@@ -204,7 +202,7 @@ hr {
 	bottom: 5%;
 	right: 3%;
 	transition: border-radius 0.5s, width 0.5s, height 0.5s;
-	z-index: 99;
+	z-index: 99999;
 
 	&:hover {
 		border-radius: 10px;
@@ -222,7 +220,7 @@ hr {
 	margin-bottom: 30px;
 
 	img {
-		height: 50px;
+		width: 55%;
 	}
 
 	span {
@@ -235,7 +233,7 @@ hr {
 
 .hepc-footer {
 	background: white;
-	bottom: 15px;
+	bottom: 20px;
 	position: fixed;
 	left: 0;
 	right: 0;
@@ -368,7 +366,7 @@ Page Content
 				padding: 10px 0;
 
 				&::before {
-					content: "0" counter(li) ") "; 
+					content: counter(li) ") "; 
 					color: $primary;
 					display: inline-block; 
 					width: 1em;
@@ -422,7 +420,7 @@ Page Content
 
 	.location-container {
 		border: 1px solid $secondary;
-		padding: 10px 20px;
+		padding: 10px 20px 25px;
 
 		.location-row {
 			border-bottom: 1px solid $primary;

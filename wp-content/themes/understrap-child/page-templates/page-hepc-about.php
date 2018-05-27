@@ -23,7 +23,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<div class="section">
 								<div class="container">
 									<div class="row">
-										<div class="offset-1 col-10">
+										<div class="col-12">
 											<?php the_sub_field('slide'); ?>
 										</div>								
 									</div>
