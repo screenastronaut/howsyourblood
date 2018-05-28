@@ -27,10 +27,13 @@ jQuery(document).ready(function($) {
 		}
 	});
 
-	$('#checklist-submit').on('click', function() {
-		if($('fieldset:not(:has(:radio:checked))').length) {
-			alert('Please answer all questions on the checklist.');
+	$('.question-row input[type=radio]').on('click', function() {
+		var nextcount = $(this).data('nextcount');
+		if(nextcount !== 'q-last') {
+			$('.question-row').removeClass('active-question');
+			$('#' + nextcount).addClass('active-question');
 		} else {
+			$('.question-row').removeClass('active-question');
 			var yescount = $('.yes-check:radio:checked').length;
 			if(yescount > 2) {
 				$('.checklist-quiz').hide();
@@ -41,7 +44,15 @@ jQuery(document).ready(function($) {
 				$('.checklist-result').show();
 				$('.low-risk').show();
 			}
-			$('html, body').animate({scrollTop:0}, 'fast');
 		}
+	});
+
+	$('.reset-quiz').on('click', function() {
+		$('input[type=radio]').prop('checked', false);
+		$('#q-1').addClass('active-question');
+		$('.checklist-quiz').show();
+		$('.checklist-result').hide();
+		$('.high-risk').hide();
+		$('.low-risk').hide();
 	});
 });

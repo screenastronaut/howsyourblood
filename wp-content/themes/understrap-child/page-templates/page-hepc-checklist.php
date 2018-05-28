@@ -17,32 +17,45 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<div class="checklist-quiz container">
-					<div class="row">
-						<div class="col center">
-							<h1>Checklist</h1>
-							<p>Should I get tested for Hep C?</p>
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/checklist.jpg" width="40%">
-						</div>
+				<div class="checklist-quiz container margin-30">
+					<div class="overlay-div">
+						<h1>Checklist</h1>
+						<p>Should I get tested for Hep C?</p>
 					</div>
-					<div class="row">
-						<div class="offset-2 col-8">
-
-							<?php if(have_rows('checklist')) :
-								$count = 1;
-								while(have_rows('checklist')) : the_row(); ?>
-									<?php the_sub_field('question'); ?>
-									<fieldset id="q-<?=$count?>">
-										<input type="radio" id="yes-<?=$count?>" name="q-<?=$count?>" value="Yes" class="yes-check"><label for="yes-<?=$count?>">Yes</label>
-										<input type="radio" id="no-<?=$count?>" name="q-<?=$count?>" value="No"><label for="no-<?=$count?>">No</label>
+					<?php if(have_rows('checklist')) :
+						$count = 1;
+						$maxcount = count(get_field('checklist'));
+						while(have_rows('checklist')) : the_row(); 
+							if($count < $maxcount) {
+								$nextcount = 'q-'.($count + 1);
+							} else {
+								$nextcount = 'q-last';
+							}
+							?>
+							<div class="row question-row <?php if($count===1) echo 'active-question'; ?>" id="q-<?=$count?>">
+								<div class="col-7 margin-30">
+									<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/checklist.jpg" width="85%" >
+								</div>
+								<div class="col-5 margin-60">
+									<span class="red-question"><?=$count?>. </span><?php the_sub_field('question'); ?>
+									<fieldset>
+										<label for="yes-<?=$count?>">
+											<input type="radio" id="yes-<?=$count?>" name="q-<?=$count?>" data-nextcount="<?=$nextcount?>" value="Yes" class="yes-check">
+											Yes
+											<div class="control_indicator"></div>
+										</label>
+										<label for="no-<?=$count?>">
+											<input type="radio" id="no-<?=$count?>" name="q-<?=$count?>" data-nextcount="<?=$nextcount?>" value="No">
+											No
+											<div class="control_indicator"></div>
+										</label>
 									</fieldset>
-									<?php $count++; endwhile; endif; ?>
-									<div class="center">
-										<a class="cta-link" id="checklist-submit">Submit</a>
-									</div>
-									
 								</div>
 							</div>
+							<?php 
+							$count++; 
+						endwhile; 
+					endif; ?>
 						</div>
 
 						<div class="checklist-result container">
@@ -77,11 +90,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 									<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/blood-vial-free.jpg" alt="">
 								</div>
 							</div>
-							<div class="row">								
+							<div class="row margin-60">								
 								<div class="offset-2 col-8 center">
 									<p>Mention or present this code as you sign up for your test at any partnering locations.</p>
-									<div class="center">
-										<a class="cta-link" href="../hepc-locations">Locate Nearest</a>
+									<div class="center margin-30">
+										<a class="cta-link reset-quiz" href="#">Reset Quiz</a>
+										<a class="cta-link" href="<?php echo get_permalink(get_page_by_path('hepc-locations')) ?>">Locate Nearest</a>
 									</div>
 								</div>
 							</div>
