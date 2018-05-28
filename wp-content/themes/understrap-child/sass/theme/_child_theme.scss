@@ -439,7 +439,7 @@ Page Content
 
 			.location-title {
 				color: $primary;
-				font-weight: 700;
+				// font-weight: 700;
 			}
 
 			img {
@@ -525,7 +525,7 @@ Old Phase 1
 
 	.signup-submit {
 		background-color: $primary !important;
-		border: none !important;
+		border: 1px solid transparent !important;
 		color: #fff !important;
 		text-transform: uppercase !important;
 
