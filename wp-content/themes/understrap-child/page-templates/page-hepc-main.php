@@ -17,12 +17,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
+				<img class="mouse-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/img/mouse.svg">
 				<div id="fullpage">
 					<div class="section">
 						<div class="container">
 							<div class="row">
 								<div class="col-12">
 									<?php the_field('first_section'); ?>
+
 								</div>								
 							</div>
 						</div>

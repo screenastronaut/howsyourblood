@@ -33,6 +33,11 @@ if(is_page('hepc') || is_page('about-hepc')) {
 	<meta name="apple-mobile-web-app-title" content="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<link rel="icon" type="image/png" href="<?php echo get_stylesheet_directory_uri(); ?>/img/16x16.png" sizes="16x16">  
+	<link rel="icon" type="image/png" href="<?php echo get_stylesheet_directory_uri(); ?>/img/32x32.png" sizes="32x32">  
+	<link rel="icon" type="image/png" href="<?php echo get_stylesheet_directory_uri(); ?>/img/48x48.png" sizes="48x48"> 
+	<link rel="icon" type="image/png" href="<?php echo get_stylesheet_directory_uri(); ?>/img/64x64.png" sizes="64x64"> 
+	<link rel="icon" type="image/png" href="<?php echo get_stylesheet_directory_uri(); ?>/img/128x128.png" sizes="128x128"> 
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116690684-1"></script>

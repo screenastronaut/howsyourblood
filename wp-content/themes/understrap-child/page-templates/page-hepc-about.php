@@ -17,6 +17,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
+				<img class="mouse-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/img/mouse.svg">
 				<div id="fullpage">
 					<?php if(have_rows('hepc_sliders')) :
 						while(have_rows('hepc_sliders')) : the_row(); ?>
