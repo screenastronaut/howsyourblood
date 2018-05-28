@@ -10291,6 +10291,7 @@ hr {
 .hepc-header {
   background: white;
   position: fixed;
+  top: 0;
   width: calc(100% - 20px);
   z-index: 9999; }
 
@@ -10324,12 +10325,13 @@ hr {
 
 .hepc-footer {
   background: white;
-  bottom: 20px;
+  bottom: 0;
   position: fixed;
   left: 0;
   right: 0;
   margin: auto;
   margin-top: 0;
+  padding-bottom: 20px;
   z-index: 9999; }
 
 /*
@@ -10437,7 +10439,8 @@ Page Content
     counter-reset: li; }
     .faq-container ol .faq-question > li {
       counter-increment: li;
-      padding: 10px 0; }
+      padding: 10px 0;
+      width: 95%; }
       .faq-container ol .faq-question > li::before {
         content: counter(li) ") ";
         color: #c33b47;
@@ -10452,6 +10455,7 @@ Page Content
         background-size: contain;
         float: right;
         height: 20px;
+        margin-right: -5%;
         width: 20px; }
       .faq-container ol .faq-question > li.hover::after {
         content: '';
@@ -10685,6 +10689,13 @@ Old Phase 1
   .site-header .navbar a,
   .site-footer span {
     font-size: 18px; } }
+@media (max-width: 960px) {
+  .mouse-icon {
+    display: none; }
+
+  .hepc-header,
+  .hepc-footer {
+    position: relative; } }
 @media (max-width: 768px) {
   body {
     font-size: 18px;

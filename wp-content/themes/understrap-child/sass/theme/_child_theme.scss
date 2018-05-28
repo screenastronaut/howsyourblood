@@ -190,6 +190,7 @@ hr {
 .hepc-header {
 	background: white;
 	position: fixed;
+	top: 0;
 	width: calc(100% - 20px);
 	z-index: 9999;
 }
@@ -233,12 +234,13 @@ hr {
 
 .hepc-footer {
 	background: white;
-	bottom: 20px;
+	bottom: 0;
 	position: fixed;
 	left: 0;
 	right: 0;
 	margin: auto;
 	margin-top: 0;
+	padding-bottom: 20px;
 	z-index: 9999;
 }
 
@@ -384,6 +386,7 @@ Page Content
 		.faq-question > li {
 			counter-increment: li;
 			padding: 10px 0;
+			width: 95%;
 
 			&::before {
 				content: counter(li) ") "; 
@@ -403,6 +406,7 @@ Page Content
 				background-size: contain;
 				float: right;
 				height: 20px;
+				margin-right: -5%;
 				width: 20px;
 			}
 

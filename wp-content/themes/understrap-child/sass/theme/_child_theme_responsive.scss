@@ -58,7 +58,15 @@
 @media (max-width: 1024px) {
 }
 
-@media (max-width: 950px) {
+@media (max-width: 960px) {
+	.mouse-icon {
+		display: none;
+	}
+
+	.hepc-header,
+	.hepc-footer {
+		position: relative;
+	}
 }
 
 @media (max-width: 910px) {
