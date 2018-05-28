@@ -83,6 +83,8 @@ $queryresults = $wpdb->get_results($querystring);
 									$postcode = $post->postcode;
 									$city = $post->city;
 									$officephone = $post->officephone;
+									$location = str_replace(' ', '%20', $orgnam.$address);
+									$googlemap = 'https://www.google.com/maps/search/?api=1&query='.$location;
 									?>
 									<div class="location-row container-fluid" data-state="<?php echo $post->state; ?>">
 										<div class="row">
@@ -98,7 +100,7 @@ $queryresults = $wpdb->get_results($querystring);
 												<span class="location-title">Office No: </span><a href="tel:<?php echo $officephone; ?>"><?php echo $officephone; ?></a>
 											</div>
 											<div class="col-2 my-auto">
-												<a href="<?php echo $google_map_link; ?>" target="_blank"><img src="<?php echo get_stylesheet_directory_uri();?>/img/gmap.jpg" alt="Google Map"></a>
+												<a href="<?php echo $googlemap; ?>" target="_blank"><img src="<?php echo get_stylesheet_directory_uri();?>/img/gmap.jpg" alt="Google Map"></a>
 											</div>
 										</div>
 									</div>									

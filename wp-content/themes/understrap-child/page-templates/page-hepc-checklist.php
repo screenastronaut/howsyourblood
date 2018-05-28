@@ -33,10 +33,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 							}
 							?>
 							<div class="row question-row <?php if($count===1) echo 'active-question'; ?>" id="q-<?=$count?>">
-								<div class="col-7 margin-30">
+								<div class="col-sm-7 col-12 margin-30">
 									<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/checklist.jpg" width="85%" >
 								</div>
-								<div class="col-5 margin-60">
+								<div class="col-sm-5 col-12 margin-60">
 									<span class="red-question"><?=$count?>. </span><?php the_sub_field('question'); ?>
 									<fieldset>
 										<label for="yes-<?=$count?>">
