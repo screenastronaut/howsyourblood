@@ -68,6 +68,12 @@ $queryresults = $wpdb->get_results($querystring);
 								<option value="Terengganu">Terengganu</option>
 							</select>
 						</div>
+						<div class="offset-2 col-6">							
+							<input type="text" class="location-searchtext" name="location-search" placeholder="Search by City or Postcode">
+						</div>
+						<div class="col-2">
+							<button class="location-searchbtn">Search</button>
+						</div>
 					</div>
 					<div class="row">
 						<div class="location-container offset-2 col-8">
@@ -86,7 +92,7 @@ $queryresults = $wpdb->get_results($querystring);
 									$location = str_replace(' ', '%20', $orgnam.$address);
 									$googlemap = 'https://www.google.com/maps/search/?api=1&query='.$location;
 									?>
-									<div class="location-row container-fluid" data-state="<?php echo $post->state; ?>">
+									<div class="location-row container-fluid" data-state="<?php echo $state; ?>" data-postcode="<?php echo $postcode; ?>" data-city="<?php echo strtolower($city); ?>">
 										<div class="row">
 											<div class="col-6">
 												<span class="location-name"><?php echo $orgname; ?></span>

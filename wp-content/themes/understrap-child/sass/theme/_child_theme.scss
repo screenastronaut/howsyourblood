@@ -409,13 +409,32 @@ Page Content
 		}
 	}
 
-	.location-state {
+	.location-state,
+	.location-searchtext {
 		border: 1px solid $secondary;
 		color: $primary;
 		font-weight: 700;
 		margin: 20px 0;
 		padding: 10px;
 		width: 100%;
+	}
+
+	.location-searchtext {
+		margin-top: 0;
+	}
+
+	.location-searchbtn {
+		background: transparent;
+		border: 1px solid $secondary;
+		cursor: pointer;
+		padding: 10px;
+		text-transform: uppercase;
+		width: 100%;
+
+		&:hover {
+			background: $secondary;
+			color: white;
+		}
 	}
 
 	.location-container {

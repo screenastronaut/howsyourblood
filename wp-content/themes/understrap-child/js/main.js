@@ -18,6 +18,7 @@ jQuery(document).ready(function($) {
 	});
 
 	$('.location-state').change(function() {
+		$('.location-searchtext').val('');
 		var state = $(this).val();
 		if(state === 'all') {
 			$('.location-row').show();
@@ -25,6 +26,16 @@ jQuery(document).ready(function($) {
 			$('.location-row').hide();
 			$('.location-row[data-state="' + state + '"]').show();
 		}
+	});
+
+	$('.location-searchbtn').on('click', function() {
+		$('.location-state').val('all');
+		var searchtext = $('.location-searchtext').val();
+		var citysearch = $('.location-row[data-city="' + searchtext + '"]');
+		var postcodesearch = $('.location-row[data-postcode="' + searchtext + '"]');
+		$('.location-row').hide();
+		citysearch.show();
+		postcodesearch.show();
 	});
 
 	$('.question-row input[type=radio]').on('click', function() {
