@@ -17,7 +17,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<div class="checklist-quiz container margin-30">
+				<div class="checklist-quiz container">
 					<div class="overlay-div">
 						<h1>Checklist</h1>
 					</div>
@@ -36,8 +36,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 									<img src="<?php the_sub_field('photo'); ?>" width="85%" >
 									<!-- <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/checklist.jpg" width="85%" > -->
 								</div>
-								<div class="col-sm-5 col-12 margin-60">
-									<h3>Should I get tested for Hep C?</h3>
+								<div class="col-sm-5 col-12">
+									<h3 style="margin-top:0">Should I get tested for Hep C?</h3>
 									<span class="red-question"><?=$count?>. </span><?php the_sub_field('question'); ?>
 									<fieldset>
 										<label for="yes-<?=$count?>">
@@ -62,7 +62,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="checklist-result container">
 					<div class="low-risk">
 						<div class="row">
-							<div class="offset-2 col-8 center">
+							<div class="offset-sm-2 col-sm-8 col-12 center">
 								<h1>Checklist Results</h1>
 								<p>Should you get tested for Hep C?</p>
 
@@ -72,7 +72,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</div>
 					<div class="high-risk">
 						<div class="row">
-							<div class="offset-2 col-8 center">
+							<div class="offset-sm-2 col-sm-8 col-12 center">
 								<h1>Checklist Results</h1>
 								<p>Should you get tested for Hep C?</p>
 
@@ -81,7 +81,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						</div>
 					</div>
 					<div class="row">
-						<div class="offset-2 col-8 center">
+						<div class="offset-sm-2 col-sm-8 col-12 center">
 							<h2>Congratulations</h2>
 							<p>Here's a promo code for your next Hepatitis C test!</p>
 						</div>
@@ -92,10 +92,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 						</div>
 					</div>
 					<div class="row margin-60">								
-						<div class="offset-2 col-8 center">
+						<div class="offset-sm-2 col-sm-8 col-12 center">
 							<p>Mention or present this code as you sign up for your test at any partnering locations.</p>
-							<div class="center margin-30">
-								<a class="cta-link reset-quiz" href="#">Reset Quiz</a>
+							<div class="center">
+								<a class="cta-link reset-quiz margin-30" href="#">Reset Quiz</a>
 								<a class="cta-link" href="<?php echo get_permalink(get_page_by_path('hepc-locations')) ?>">Locate Nearest</a>
 							</div>
 						</div>

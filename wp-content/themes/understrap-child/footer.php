@@ -20,10 +20,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<div class="row">
 
-			<div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12">
+			<div class="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-4">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/hfm-logo.png" class="logo" alt="Hepatitis Free Malaysia logo">
 			</div>
-			<div class="offset-xl-6 offset-lg-6 offset-md-6 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+			<div class="offset-xl-6 offset-lg-6 offset-md-6 col-xl-4 col-lg-4 col-md-4 col-sm-8 col-8">
 				<span>&copy;Copyright 2017. All rights reserved by Hepatitis Free Malaysia.</span>
 			</div>
 

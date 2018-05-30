@@ -10436,11 +10436,12 @@ Page Content
   padding: 15px; }
   .faq-container ol {
     list-style: none;
-    counter-reset: li; }
+    counter-reset: li;
+    padding-left: 0; }
     .faq-container ol .faq-question > li {
       counter-increment: li;
       padding: 10px 0;
-      width: 95%; }
+      width: 90%; }
       .faq-container ol .faq-question > li::before {
         content: counter(li) ") ";
         color: #c33b47;
@@ -10455,7 +10456,7 @@ Page Content
         background-size: contain;
         float: right;
         height: 20px;
-        margin-right: -5%;
+        margin-right: -10%;
         width: 20px; }
       .faq-container ol .faq-question > li.hover::after {
         content: '';
@@ -10688,7 +10689,10 @@ Old Phase 1
   .site-header .header-small,
   .site-header .navbar a,
   .site-footer span {
-    font-size: 18px; } }
+    font-size: 18px; }
+
+  .checklist-quiz {
+    margin-top: 30px; } }
 @media (max-width: 960px) {
   .mouse-icon {
     display: none; }
@@ -10756,5 +10760,31 @@ Old Phase 1
 @media (max-width: 600px) {
   .resources h4 {
     height: 60px !important; } }
+@media (max-width: 480px) {
+  .site-footer span {
+    padding: 0; }
+
+  .section {
+    margin-top: 30px; }
+
+  .full_width,
+  .one_half,
+  .one_third,
+  .two_third,
+  .one_fourth,
+  .three_fourth,
+  .one_fifth,
+  .two_fifth,
+  .three_fifth,
+  .four_fifth,
+  .one_sixth,
+  .five_sixth,
+  .content-column ul.first-level {
+    margin-bottom: 0 !important; }
+
+  .checklist-quiz .overlay-div {
+    position: relative; }
+  .checklist-quiz .question-row img {
+    width: 100%; } }
 
 /*# sourceMappingURL=child-theme.css.map */

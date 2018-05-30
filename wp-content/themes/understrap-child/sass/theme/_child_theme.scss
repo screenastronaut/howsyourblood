@@ -382,11 +382,12 @@ Page Content
 	ol {
 		list-style: none;
 		counter-reset: li;
+		padding-left: 0;
 
 		.faq-question > li {
 			counter-increment: li;
 			padding: 10px 0;
-			width: 95%;
+			width: 90%;
 
 			&::before {
 				content: counter(li) ") "; 
@@ -406,7 +407,7 @@ Page Content
 				background-size: contain;
 				float: right;
 				height: 20px;
-				margin-right: -5%;
+				margin-right: -10%;
 				width: 20px;
 			}
 

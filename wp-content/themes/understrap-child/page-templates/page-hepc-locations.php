@@ -24,7 +24,7 @@ max(if(`field_name`='email', `field_value`, null )) AS 'email',
 max(if(`field_name`='add-1', `field_value`, null )) AS 'add1',
 max(if(`field_name`='add-2', `field_value`, null )) AS 'add2',
 max(if(`field_name`='add-3', `field_value`, null )) AS 'add3',
- max(if(`field_name`='opening-hours', `field_value`, null )) AS 'openinghours',
+max(if(`field_name`='opening-hours', `field_value`, null )) AS 'openinghours',
 max(if(`field_name`='postcode', `field_value`, null )) AS 'postcode',
 max(if(`field_name`='city', `field_value`, null )) AS 'city',
 max(if(`field_name`='Submitted From', `field_value`, null )) AS 'Submitted From',
@@ -48,7 +48,7 @@ $queryresults = $wpdb->get_results($querystring);
 				<div class="container">
 					<div class="row">
 						<div class="col-12"><h1 class="center">Screening Locations</h1></div>
-						<div class="offset-2 col-8">
+						<div class="offset-lg-2 col-lg-8 offset-md-1 col-md-10 col-12">
 							<select name="state" id="state" class="location-state">
 								<option value="all" default>Select Your State:</option>
 								<option value="Johor">Johor</option>
@@ -68,52 +68,54 @@ $queryresults = $wpdb->get_results($querystring);
 								<option value="Terengganu">Terengganu</option>
 							</select>
 						</div>
-						<div class="offset-2 col-6">							
+						<div class="offset-lg-2 col-lg-6 offset-md-1 col-md-8 col-12">							
 							<input type="text" class="location-searchtext" name="location-search" placeholder="Search by City or Postcode">
 						</div>
-						<div class="col-2">
+						<div class="col-md-2 col-12">
 							<button class="location-searchbtn">Search</button>
 						</div>
 					</div>
 					<div class="row">
-						<div class="location-container offset-2 col-8">
-							<?php 
-							if($queryresults) :
-								global $post;
-								foreach($queryresults as $post) :
-									setup_postdata($post);
-									$orgname = $post->orgname;
-									$openinghours = $post->openinghours;
-									$state = $post->state;
-									$address = $post->add1.'<br>'.$post->add2.'<br>'.$post->add3;
-									$postcode = $post->postcode;
-									$city = $post->city;
-									$officephone = $post->officephone;
-									$location = str_replace(' ', '%20', $orgnam.$address);
-									$googlemap = 'https://www.google.com/maps/search/?api=1&query='.$location;
-									?>
-									<div class="location-row container-fluid" data-state="<?php echo $state; ?>" data-postcode="<?php echo $postcode; ?>" data-city="<?php echo strtolower($city); ?>">
-										<div class="row">
-											<div class="col-6">
-												<span class="location-name"><?php echo $orgname; ?></span>
-												<span class="location-hours"><?php echo $openinghours; ?></span><br>
-												<span class="location-title">Address: </span><br><?php echo $address; ?><br>
+						<div class="offset-lg-2 col-lg-8 offset-md-1 col-md-10 col-12">
+							<div class="location-container margin-30">
+								<?php 
+								if($queryresults) :
+									global $post;
+									foreach($queryresults as $post) :
+										setup_postdata($post);
+										$orgname = $post->orgname;
+										$openinghours = $post->openinghours;
+										$state = $post->state;
+										$address = $post->add1.'<br>'.$post->add2.'<br>'.$post->add3;
+										$postcode = $post->postcode;
+										$city = $post->city;
+										$officephone = $post->officephone;
+										$location = str_replace(' ', '%20', $orgnam.$address);
+										$googlemap = 'https://www.google.com/maps/search/?api=1&query='.$location;
+										?>
+										<div class="location-row container-fluid" data-state="<?php echo $state; ?>" data-postcode="<?php echo $postcode; ?>" data-city="<?php echo strtolower($city); ?>">
+											<div class="row">
+												<div class="col-sm-6 col-12">
+													<span class="location-name"><?php echo $orgname; ?></span>
+													<span class="location-hours"><?php echo $openinghours; ?></span><br>
+													<span class="location-title">Address: </span><br><?php echo $address; ?><br>
+												</div>
+												<div class="col-sm-4 col-12 my-auto">
+													<span class="location-title">Postcode: </span><?php echo $postcode; ?><br>
+													<span class="location-title">City: </span><?php echo $city; ?><br>
+													<span class="location-title">State: </span><?php echo $state; ?><br>
+													<span class="location-title">Office No: </span><a href="tel:<?php echo $officephone; ?>"><?php echo $officephone; ?></a>
+												</div>
+												<div class="col-sm-2 col-12 my-auto">
+													<a href="<?php echo $googlemap; ?>" target="_blank"><img src="<?php echo get_stylesheet_directory_uri();?>/img/gmap.jpg" alt="Google Map"></a>
+												</div>
 											</div>
-											<div class="col-4 my-auto">
-												<span class="location-title">Postcode: </span><?php echo $postcode; ?><br>
-												<span class="location-title">City: </span><?php echo $city; ?><br>
-												<span class="location-title">State: </span><?php echo $state; ?><br>
-												<span class="location-title">Office No: </span><a href="tel:<?php echo $officephone; ?>"><?php echo $officephone; ?></a>
-											</div>
-											<div class="col-2 my-auto">
-												<a href="<?php echo $googlemap; ?>" target="_blank"><img src="<?php echo get_stylesheet_directory_uri();?>/img/gmap.jpg" alt="Google Map"></a>
-											</div>
-										</div>
-									</div>									
-									<?php
-								endforeach;
-							endif;
-							?>
+										</div>									
+										<?php
+									endforeach;
+								endif;
+								?>
+							</div>
 						</div>
 					</div>
 				</div>

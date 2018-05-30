@@ -45,6 +45,10 @@
 	.site-footer span {
 		font-size: $base-font-size;
 	}
+
+	.checklist-quiz {
+		margin-top: 30px;
+	}
 }
 
 @media (max-width: 1367px) {
@@ -172,6 +176,39 @@
 }
 
 @media (max-width: 480px) {
+	.site-footer span {
+		padding: 0;
+	}
+
+	.section {
+		margin-top: 30px;
+	}
+
+	.full_width, 
+	.one_half, 
+	.one_third, 
+	.two_third, 
+	.one_fourth, 
+	.three_fourth, 
+	.one_fifth, 
+	.two_fifth, 
+	.three_fifth, 
+	.four_fifth, 
+	.one_sixth, 
+	.five_sixth,
+	.content-column ul.first-level {
+		margin-bottom: 0 !important;
+	}
+
+	.checklist-quiz {
+		.overlay-div {
+			position: relative;
+		}
+
+		.question-row img {
+			width: 100%;
+		}
+	}
 }
 
 @media (max-width: 420px) {
