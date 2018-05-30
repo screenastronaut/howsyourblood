@@ -32,6 +32,12 @@ function theme_enqueue_styles() {
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
     }
+
+    wp_localize_script( 'main-script', 'ajax',
+        array(
+            'ajaxUrl' => admin_url( 'admin-ajax.php' ),
+        )
+    );
 }
 
 register_nav_menus( array(
@@ -41,3 +47,12 @@ register_nav_menus( array(
 register_nav_menus( array(
     'hecp' => __( 'HECP Menu' ),
 ) );
+
+//ajax script
+
+add_action("wp_ajax_track_quiz_results", "track_quiz_results");
+add_action("wp_ajax_nopriv_track_quiz_results", "track_quiz_results");
+
+function track_quiz_results() {
+    //
+}

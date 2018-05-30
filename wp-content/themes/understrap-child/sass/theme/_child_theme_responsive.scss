@@ -104,8 +104,8 @@
 
 	.floating-cta {
 		background-size: 40%;
-		height: 50px;
-		width: 50px;
+		height: 80px;
+		width: 80px;
 
 		&:hover {
 			background-size: contain;
@@ -176,6 +176,11 @@
 }
 
 @media (max-width: 480px) {
+	.site-header .header-small {
+		margin-left: 30%;
+		width: 70%;
+	}
+
 	.site-footer span {
 		padding: 0;
 	}

@@ -39,6 +39,7 @@ jQuery(document).ready(function($) {
 	});
 
 	$('.question-row input[type=radio]').on('click', function() {
+
 		var nextcount = $(this).data('nextcount');
 		if(nextcount !== 'q-last') {
 			$('.question-row').removeClass('active-question');
@@ -55,6 +56,21 @@ jQuery(document).ready(function($) {
 				$('.checklist-result').show();
 				$('.low-risk').show();
 			}
+
+			// var results = [];
+
+			// $('input[name="q-1"]:checked').val()
+
+			// $.ajax({
+			// 	url 	: ajax.ajaxUrl,
+			// 	type	: 'post',
+			// 	data 	: {
+			// 		action: 'track_quiz_results',
+			// 	},
+			// 	success: function(data) {
+			// 		console.log(data);
+			// 	}
+			// });
 		}
 	});
 
