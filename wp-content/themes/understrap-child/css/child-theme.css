@@ -10285,6 +10285,7 @@ hr {
     text-align: right; }
     .site-header .hcp-cta img {
       margin-top: -10px;
+      position: relative;
       width: 75%;
       z-index: 99; }
 
@@ -10300,7 +10301,7 @@ hr {
   height: 80px;
   width: 80px;
   position: fixed;
-  bottom: 5%;
+  bottom: 15%;
   right: 3%;
   transition: border-radius 0.5s, width 0.5s, height 0.5s;
   z-index: 99999; }
@@ -10314,14 +10315,30 @@ hr {
 
 .site-footer {
   margin-top: 30px;
-  margin-bottom: 30px; }
+  margin-bottom: 10px; }
   .site-footer img {
     width: 55%; }
   .site-footer span {
-    float: right;
+    display: inline-block;
     font-size: 12px;
     padding: 15px 0;
     text-align: right; }
+  .site-footer ul.translate {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase; }
+    .site-footer ul.translate li {
+      float: left;
+      font-size: 13.986px;
+      font-weight: 800;
+      padding: 0 5px; }
+      .site-footer ul.translate li.current-lang a {
+        color: #000;
+        text-decoration: none; }
+      .site-footer ul.translate li:not(:last-of-type) {
+        border-right: 1px solid #a8a8a8; }
 
 .hepc-footer {
   background: white;
@@ -10331,7 +10348,7 @@ hr {
   right: 0;
   margin: auto;
   margin-top: 0;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   z-index: 9999; }
 
 /*

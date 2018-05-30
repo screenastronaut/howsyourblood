@@ -83,7 +83,7 @@ if(is_page('hepc') || is_page('about-hepc')) {
 								if($theme === 'hcp') :
 									wp_nav_menu(
 										array(
-											'theme_location'  => 'primary',
+											'theme_location'  => 'hcp',
 											'container_class' => 'navbar-collapse justify-content-center',
 											'container_id'    => 'navbarNavDropdown',
 											'menu_class'      => 'navbar-nav ml-auto',
@@ -167,7 +167,7 @@ if(is_page('hepc') || is_page('about-hepc')) {
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col">
-							<?php if(is_front_page() || is_page('register')) : ?>
+							<?php if(is_front_page() || is_page('welcome') || is_page('register')) : ?>
 							<h1 class="page-title center"><?php the_title(); ?></h1>
 						<?php else :
 							if(get_field('cover_photo')) {

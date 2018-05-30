@@ -35,5 +35,9 @@ function theme_enqueue_styles() {
 }
 
 register_nav_menus( array(
+    'hcp' => __( 'HCP Menu' ),
+) );
+
+register_nav_menus( array(
     'hecp' => __( 'HECP Menu' ),
 ) );
