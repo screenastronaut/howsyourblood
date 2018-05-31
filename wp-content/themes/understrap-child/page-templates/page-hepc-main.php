@@ -60,13 +60,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 								</div>
 							</div>
 							<div class="row">
-								<div class="offset-2 col-8">
-									<p style="margin:0;text-align:center"><strong>References</strong></p>
-									<ol style="font-size: 12px;">
+								<div class="col-12">
+									<p><strong>References</strong></p>
+									<ol style="font-size: 11px;padding-left:10px;">
 										<li>Stanaway et al, The global burden of viral hepatitis from 1990 to 2013: findings from the Global Burden of Disease Study 2013, Vol 388, 1081-88, Lancet, July 2016.</li>
 										<li>Fatiha S, et al. Estimated 3-year acquisition cost of direct acting antiviral (DAA) for the treatment of Hepatitis C in Malaysia in 2018 to 2020. APASL 2018 Delhi.</li>
-										<li>Centers for Disease Control and Prevention (CDC). Hepatitis FAQs for the Public. Retrieved from https://www.cdc.gov/hepatitis/hcv/cfaq.htm. Last accessed 19 March 2018.</li>
-										<li>World Health Organization (WHO). Hepatitis C. Retrieved from http://www.who.int/mediacentre/factsheets/fs164/en/. Last accessed 19 March 2018.</li>
+										<li>Centers for Disease Control and Prevention (CDC). Hepatitis FAQs for the Public. Retrieved from <a href="https://www.cdc.gov/hepatitis/hcv/cfaq.htm">https://www.cdc.gov/hepatitis/hcv/cfaq.htm</a>. Last accessed 19 March 2018.</li>
+										<li>World Health Organization (WHO). Hepatitis C. Retrieved from <a href="http://www.who.int/mediacentre/factsheets/fs164/en/">http://www.who.int/mediacentre/factsheets/fs164/en/</a>. Last accessed 19 March 2018.</li>
 									</ol>
 								</div>
 							</div>

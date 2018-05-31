@@ -21,7 +21,7 @@ global $theme;
 				<div class="container">
 					<div class="row">
 						<div class="col">
-							<h1 class="center">FAQs</h1>
+							<h1 class="center">Frequently Asked Questions (FAQs)</h1>
 						</div>
 						<div class="faq-container offset-1 col-10">
 							<ol>

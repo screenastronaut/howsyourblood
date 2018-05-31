@@ -10167,18 +10167,43 @@ a.skip-link {
 .gallery-caption {
   display: block; }
 
+html,
+body {
+  height: 100%;
+  min-height: 100%; }
+
 body {
   font-family: acumin-pro-condensed, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: 1.25; }
+  body:before {
+    top: 0; }
+  body:after {
+    bottom: 0; }
 
 body.red-theme {
-  border: 10px solid #c33b47; }
+  border-left: 10px solid #c33b47;
+  border-right: 10px solid #c33b47; }
+  body.red-theme:before, body.red-theme:after {
+    content: "";
+    position: fixed;
+    background: #c33b47;
+    left: 0;
+    right: 0;
+    height: 10px; }
 
 body.blue-theme {
-  border: 10px solid #47c9f4; }
+  border-left: 10px solid #47c9f4;
+  border-right: 10px solid #47c9f4; }
+  body.blue-theme:before, body.blue-theme:after {
+    content: "";
+    position: fixed;
+    background: #47c9f4;
+    left: 0;
+    right: 0;
+    height: 10px; }
   body.blue-theme .entry-content.hecp-theme {
     padding-top: 100px; }
   body.blue-theme h1 {
@@ -10219,8 +10244,6 @@ h4 {
 
 p {
   margin-bottom: 9px; }
-  p.grey-text {
-    color: #a8a8a8; }
 
 a {
   color: #c33b47;
@@ -10245,6 +10268,7 @@ hr {
   margin: 60px auto; }
 
 .wrapper {
+  min-height: calc(100vh - 115px - 100px);
   padding: 0; }
 
 .logo img {
@@ -10295,7 +10319,7 @@ hr {
 .hepc-header {
   background: white;
   position: fixed;
-  top: 0;
+  top: 10px;
   width: calc(100% - 20px);
   z-index: 9999; }
 
@@ -10317,8 +10341,9 @@ hr {
   font-size: 12px; }
 
 .site-footer {
-  margin-top: 30px;
-  margin-bottom: 10px; }
+  height: 60px;
+  margin-top: 15px;
+  margin-bottom: 15px; }
   .site-footer img {
     width: 55%; }
   .site-footer span {
@@ -10326,22 +10351,11 @@ hr {
     font-size: 12px;
     padding: 15px 0;
     text-align: right; }
-  .site-footer ul.translate {
-    display: inline-block;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-transform: uppercase; }
-    .site-footer ul.translate li {
-      float: left;
-      font-size: 13.986px;
-      font-weight: 800;
-      padding: 0 5px; }
-      .site-footer ul.translate li.current-lang a {
-        color: #000;
-        text-decoration: none; }
-      .site-footer ul.translate li:not(:last-of-type) {
-        border-right: 1px solid #a8a8a8; }
+
+.hcp-footer span {
+  float: right; }
+.hcp-footer ul.translate {
+  display: none; }
 
 .hepc-footer {
   background: white;
@@ -10351,8 +10365,23 @@ hr {
   right: 0;
   margin: auto;
   margin-top: 0;
-  padding-bottom: 10px;
-  z-index: 9999; }
+  margin-bottom: 15px; }
+  .hepc-footer ul.translate {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase; }
+    .hepc-footer ul.translate li {
+      float: left;
+      font-size: 13.986px;
+      font-weight: 800;
+      padding: 0 5px; }
+      .hepc-footer ul.translate li.current-lang a {
+        color: #000;
+        text-decoration: none; }
+      .hepc-footer ul.translate li:not(:last-of-type) {
+        border-right: 1px solid #a8a8a8; }
 
 /*
 Page Content
@@ -10366,7 +10395,7 @@ svg {
   margin-left: -20px;
   width: 40px;
   height: 40px;
-  bottom: 20px;
+  bottom: 30px;
   padding-left: 7px;
   cursor: pointer;
   z-index: 2;
@@ -10531,6 +10560,7 @@ svg {
     padding-left: 0; }
     .faq-container ol .faq-question > li {
       counter-increment: li;
+      font-weight: 800;
       padding: 10px 0;
       width: 90%; }
       .faq-container ol .faq-question > li::before {
@@ -10617,10 +10647,14 @@ svg {
     display: flex; }
   .checklist-quiz .question-row img {
     float: right; }
+  .checklist-quiz .question-row h3 {
+    font-size: 33.84px; }
 .checklist-quiz span.red-question {
   color: #c33b47;
+  font-size: 23.94px;
   font-weight: 800; }
   .checklist-quiz span.red-question + p {
+    font-size: 21.96px;
     margin-left: 20px; }
 .checklist-quiz p {
   font-weight: 700; }
@@ -10629,7 +10663,7 @@ svg {
 .checklist-quiz label {
   color: #c33b47;
   cursor: pointer;
-  font-size: 19.98px;
+  font-size: 23.94px;
   font-weight: 800;
   margin-bottom: 5px;
   margin-left: 20px;
@@ -10641,7 +10675,7 @@ svg {
     border-radius: 50%; }
 .checklist-quiz .control_indicator {
   position: absolute;
-  top: 8px;
+  top: 12px;
   left: 0;
   height: 15px;
   width: 15px;

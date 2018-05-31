@@ -32,12 +32,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 							}
 							?>
 							<div class="row question-row <?php if($count===1) echo 'active-question'; ?>" id="q-<?=$count?>">
-								<div class="col-sm-7 col-12 margin-30">
+								<div class="col-sm-5 col-12 margin-30">
 									<img src="<?php the_sub_field('photo'); ?>" width="85%" >
-									<!-- <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/checklist.jpg" width="85%" > -->
 								</div>
-								<div class="col-sm-5 col-12">
-									<h3 style="margin-top:0">Should I get tested for Hep C?</h3>
+								<div class="col-sm-7 col-12">
+									<h3>Should I get tested for Hep C?</h3>
 									<span class="red-question"><?=$count?>. </span><?php the_sub_field('question'); ?>
 									<fieldset>
 										<label for="yes-<?=$count?>">
@@ -66,7 +65,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 								<h1>Checklist Results</h1>
 								<p>Should you get tested for Hep C?</p>
 
-								<p class="results">Compared to those who have more "Yes", your risk of being infected by HCV may be lower. However, the only way to find out if you are Hepatitis C free is to get your blood tested. Ask your doctor about Hepatitis C test today!</p>
+								<p class="results">Your risk may be lower, compared to those who have checked ‘Yes’ on more than one question but the only way to be sure that you are Hepatitis C free is through a blood test.</p>
 							</div>
 						</div>
 					</div>
@@ -76,27 +75,16 @@ $container = get_theme_mod( 'understrap_container_type' );
 								<h1>Checklist Results</h1>
 								<p>Should you get tested for Hep C?</p>
 
-								<p class="results">You may be at risk. We recommend speaking to a doctor about Hepatitis C test.</p>
+								<p class="results">You may be at risk and the only way to find out if you are Hepatitis C positive is to get your blood tested. </p>
 							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="offset-sm-2 col-sm-8 col-12 center">
-							<h2>Congratulations</h2>
-							<p>Here's a promo code for your next Hepatitis C test!</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="offset-1 col-10 center">
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/blood-vial-free.jpg" alt="">
-						</div>
-					</div>
-					<div class="row margin-60">								
-						<div class="offset-sm-2 col-sm-8 col-12 center">
-							<p>Mention or present this code as you sign up for your test at any partnering locations.</p>
+					<div class="row margin-30">								
+						<div class="offset-sm-3 col-sm-6 col-12 center">
+							<p>Ask your doctor about Hepatitis C test today!</p>
 							<div class="center">
-								<a class="cta-link reset-quiz margin-30" href="#">Reset Quiz</a>
-								<a class="cta-link" href="<?php echo get_permalink(get_page_by_path('hepc-locations')) ?>">Locate Nearest</a>
+								<a class="cta-link reset-quiz margin-30" href="#">Take the checklist again</a>
+								<a class="cta-link" href="<?php echo get_permalink(get_page_by_path('hepc-locations')) ?>">Screening Locations</a>
 							</div>
 						</div>
 					</div>
