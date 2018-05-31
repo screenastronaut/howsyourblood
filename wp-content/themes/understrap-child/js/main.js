@@ -57,20 +57,26 @@ jQuery(document).ready(function($) {
 				$('.low-risk').show();
 			}
 
-			// var results = [];
+			var results = [];
 
-			// $('input[name="q-1"]:checked').val()
+			$('input[type=radio]').each(function(index) {
+				var result = $(this).filter(':checked').val();
+				if(result) {
+					results.push(result);
+				}
+			});
 
-			// $.ajax({
-			// 	url 	: ajax.ajaxUrl,
-			// 	type	: 'post',
-			// 	data 	: {
-			// 		action: 'track_quiz_results',
-			// 	},
-			// 	success: function(data) {
-			// 		console.log(data);
-			// 	}
-			// });
+			$.ajax({
+				url 	: ajax.ajaxUrl,
+				type	: 'post',
+				data 	: {
+					action: 'track_quiz_results',
+					results: results,
+				},
+				success: function(data) {
+					//nothing happens
+				}
+			});
 		}
 	});
 

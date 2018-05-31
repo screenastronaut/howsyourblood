@@ -88,6 +88,10 @@ a {
 	}
 }
 
+img {
+	image-rendering: -webkit-optimize-contrast;
+}
+
 hr {
 	height: 1px;
 	margin: 30px 0;
@@ -303,10 +307,10 @@ svg {
   transition: opacity .5s;
 }
 .scroll-down.svg .stroke {
-  stroke: #ADA99D;
+  stroke: #000000;
 }
 .scroll-down.svg .scroller {
-  fill: #ADA99D;
+  fill: #000000;
   -webkit-animation: updown 1s infinite;
   -moz-animation: updown 1s infinite;
   -o-animation: updown 1s infinite;

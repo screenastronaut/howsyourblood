@@ -54,5 +54,15 @@ add_action("wp_ajax_track_quiz_results", "track_quiz_results");
 add_action("wp_ajax_nopriv_track_quiz_results", "track_quiz_results");
 
 function track_quiz_results() {
-    //
+    global $wpdb;
+
+    $results = $_POST['results'];
+    $resultstring = implode("', '", $results);
+    $table = "hyb_checklist_results";
+    $sql = $wpdb->prepare("INSERT INTO $table (q1,q2,q3,q4,q5,q6) VALUES (%s)", $resultstring);
+    $sql = stripslashes($sql);
+    $wpdb->query($sql);
+    echo 'success';
+
+    wp_die();
 }
