@@ -62,10 +62,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="low-risk">
 						<div class="row">
 							<div class="offset-sm-2 col-sm-8 col-12 center">
-								<h1>Checklist Results</h1>
-								<p>Should you get tested for Hep C?</p>
+								<h1>Should you get tested for Hep C?</h1>
 
-								<p class="results">Your risk may be lower, compared to those who have checked ‘Yes’ on more than one question but the only way to be sure that you are Hepatitis C free is through a blood test.</p>
+								<p class="results">Your risk may be lower, compared to those who have checked ‘Yes’ on any question but the only way to be sure that you are Hepatitis C free is through a blood test.</p>
 							</div>
 						</div>
 					</div>

@@ -162,7 +162,7 @@ if(is_page('hepc') || is_page('about-hepc')) {
 					</div>
 				</div>
 			</header>
-			<?php if($theme === 'hcp') : ?>
+			<?php if($theme === 'hcp' && !is_page('register')) : ?>
 				<a href="<?php echo get_permalink(get_page_by_path('register')); ?>"><div class="<?=$theme?> floating-cta"></div></a>
 				<div class="container-fluid">
 					<div class="row">

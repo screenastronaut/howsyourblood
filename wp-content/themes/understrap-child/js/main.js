@@ -47,7 +47,7 @@ jQuery(document).ready(function($) {
 		} else {
 			$('.question-row').removeClass('active-question');
 			var yescount = $('.yes-check:radio:checked').length;
-			if(yescount > 1) {
+			if(yescount > 0) {
 				$('.checklist-quiz').hide();
 				$('.checklist-result').show();
 				$('.high-risk').show();
