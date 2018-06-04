@@ -24,7 +24,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</svg><i class="icon icon-arrow-down"></i>
 				</div>
 				<div id="fullpage">
-					<div class="section">
+					<div class="section fp-auto-height-responsive">
 						<div class="container">
 							<div class="row">
 								<div class="col-12">
@@ -34,7 +34,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							</div>
 						</div>
 					</div>
-					<div class="section">
+					<div class="section fp-auto-height-responsive">
 						<div class="container">
 							<div class="row">
 								<div class="col-12">
@@ -43,7 +43,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							</div>
 						</div>
 					</div>
-					<div class="section">
+					<div class="section fp-auto-height-responsive">
 						<div class="container">
 							<div class="row">
 								<div class="col-12">
@@ -52,14 +52,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 							</div>
 						</div>
 					</div>
-					<div class="section">
+					<div class="section fp-auto-height-responsive">
 						<div class="container">
 							<div class="row">
 								<div class="col-12">
 									<?php the_field('fourth_section'); ?>
 								</div>
 							</div>
-							<div class="row">
+							<div class="row margin-30">
 								<div class="col-12">
 									<p><strong>References</strong></p>
 									<ol style="font-size: 11px;padding-left:10px;">
@@ -71,6 +71,26 @@ $container = get_theme_mod( 'understrap_container_type' );
 								</div>
 							</div>
 						</div>
+
+						<div class="wrapper" id="wrapper-footer" style="min-height:0">
+
+							<footer class="<?=$theme?>-footer site-footer <?php echo esc_attr( $container ); ?>" id="colophon">
+
+								<div class="row h-100">
+
+									<div class="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-4">
+										<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/hfm-logo.png" class="logo" alt="Hepatitis Free Malaysia logo">
+									</div>
+									<div class="align-self-center offset-xl-6 offset-lg-6 offset-md-6 col-xl-4 col-lg-4 col-md-4 col-sm-8 col-8">
+										<span>&copy;Copyright 2017. All rights reserved by Hepatitis Free Malaysia.</span>
+										<ul class="translate"><?php pll_the_languages(array('display_names_as' => 'slug', 'hide_if_empty' => 0)); ?></ul>
+									</div>
+
+								</div><!-- row end -->
+
+							</footer><!-- container end -->
+
+						</div><!-- wrapper end -->
 					</div>
 				</div>
 
@@ -82,4 +102,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 </div><!-- Wrapper end -->
 
-<?php get_footer(); ?>
+</div><!-- #page we need this extra closing tag here -->
+
+<?php wp_footer(); ?>
+
+</body>
+
+</html>
+
+<?php //get_footer(); ?>

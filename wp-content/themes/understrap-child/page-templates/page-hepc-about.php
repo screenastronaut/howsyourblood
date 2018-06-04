@@ -25,8 +25,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 				</div>
 				<div id="fullpage">
 					<?php if(have_rows('hepc_sliders')) :
+						$total = count(get_field('hepc_sliders'));
+						$count = 1;
 						while(have_rows('hepc_sliders')) : the_row(); ?>
-							<div class="section">
+							<div class="section fp-auto-height-responsive">
 								<div class="container">
 									<div class="row">
 										<div class="col-12">
@@ -35,7 +37,30 @@ $container = get_theme_mod( 'understrap_container_type' );
 									</div>
 								</div>
 							</div>
-						<?php endwhile;
+							<?php 
+							if($count == $total) : ?>							
+								<div class="wrapper" id="wrapper-footer" style="min-height:0">
+
+									<footer class="<?=$theme?>-footer site-footer <?php echo esc_attr( $container ); ?>" id="colophon">
+
+										<div class="row h-100">
+
+											<div class="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-4">
+												<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/hfm-logo.png" class="logo" alt="Hepatitis Free Malaysia logo">
+											</div>
+											<div class="align-self-center offset-xl-6 offset-lg-6 offset-md-6 col-xl-4 col-lg-4 col-md-4 col-sm-8 col-8">
+												<span>&copy;Copyright 2017. All rights reserved by Hepatitis Free Malaysia.</span>
+												<ul class="translate"><?php pll_the_languages(array('display_names_as' => 'slug', 'hide_if_empty' => 0)); ?></ul>
+											</div>
+
+										</div><!-- row end -->
+
+									</footer><!-- container end -->
+
+								</div><!-- wrapper end -->
+							<?php endif;
+							$count++; 
+						endwhile;
 					endif; ?>
 				</div>
 
@@ -47,4 +72,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 </div><!-- Wrapper end -->
 
-<?php get_footer(); ?>
+</div><!-- #page we need this extra closing tag here -->
+
+<?php wp_footer(); ?>
+
+</body>
+
+</html>
+
+<?php //get_footer(); ?>

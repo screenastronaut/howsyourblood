@@ -127,6 +127,12 @@ a {
 
 img {
 	image-rendering: -webkit-optimize-contrast;
+
+	&.dropshadow {
+		-webkit-box-shadow: 6px 6px 6px 0px rgba(0,0,0,0.14);
+		-moz-box-shadow: 6px 6px 6px 0px rgba(0,0,0,0.14);
+		box-shadow: 6px 6px 6px 0px rgba(0,0,0,0.14);
+	}
 }
 
 hr {
@@ -161,6 +167,7 @@ hr {
 }
 
 .hepc.floating-cta {
+	display: none;
 	background: url(../img/blood-vial-only.png) $primary no-repeat center;
 
 	&:hover {
@@ -169,6 +176,7 @@ hr {
 }
 
 .hcp.floating-cta {
+	display: none;
 	background: url(../img/blood-vial-only.png) $secondary no-repeat center;
 
 	&:hover {
@@ -268,10 +276,12 @@ hr {
 .site-footer {
 	height: 100px;
 	margin-top: 15px;
-	// margin-bottom: 15px;
+	padding-bottom: 15px;
 
 	img {
-		width: 55%;
+		// width: 55%;
+		max-height: 100%;
+		max-width: 100%;
 	}
 
 	span {
@@ -340,6 +350,7 @@ hr {
 			float: left;
 			font-size: $base-font-size*0.777;
 			font-weight: 800;
+			list-style-type: none;
 			padding: 0 5px;
 
 			&.current-lang a {
@@ -586,15 +597,18 @@ svg {
 		.faq-question > li {
 			counter-increment: li;
 			font-weight: 800;
+			list-style-position: inside;
+			margin-left: 20px;
 			padding: 10px 0;
-			width: 90%;
+			text-indent: -10px;
+			width: calc(100% - 10% - 20px);
 
 			&::before {
 				content: counter(li) ") "; 
 				color: $primary;
 				display: inline-block; 
-				width: 1em;
-				margin-right: 10px;				
+				// width: 1em;
+				// margin-right: 10px;				
 			}
 
 			&::nth-child(n+10):before {
@@ -691,6 +705,12 @@ svg {
 			width: 30px;
 		}
 	}
+}
+
+.checklist-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .checklist-quiz {

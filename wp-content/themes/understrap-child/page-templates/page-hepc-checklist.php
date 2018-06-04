@@ -9,7 +9,7 @@ get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<div class="wrapper" id="full-width-page-wrapper">
+<div class="wrapper checklist-wrapper" id="full-width-page-wrapper">
 
 	<div class="content-area" id="primary">
 
@@ -71,8 +71,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="high-risk">
 						<div class="row">
 							<div class="offset-sm-2 col-sm-8 col-12 center">
-								<h1>Checklist Results</h1>
-								<p>Should you get tested for Hep C?</p>
+								<h1>Should you get tested for Hep C?</h1>
 
 								<p class="results">You may be at risk and the only way to find out if you are Hepatitis C positive is to get your blood tested. </p>
 							</div>

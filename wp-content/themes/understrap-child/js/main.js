@@ -1,4 +1,12 @@
 jQuery(document).ready(function($) {
+	$(window).on('scroll', function() {
+		if($(window).scrollTop() > 200) {
+			$('.floating-cta').show();
+		} else {
+			$('.floating-cta').hide();
+		}
+	});
+
 	$('#fullpage').fullpage({
 		navigation: true,
 		responsiveWidth: 960,

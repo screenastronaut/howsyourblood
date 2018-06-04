@@ -118,6 +118,14 @@ $queryresults = $wpdb->get_results($querystring);
 							</div>
 						</div>
 					</div>
+					<div class="row">
+						<div class="col center">
+							<p>If you would like your clinics/hospitals listed here, please click on the button below.</p>
+							<a href="<?php echo get_permalink(get_page_by_path('register'));?>" rel="noopener">
+								<div class="cta-link">Register</div>
+							</a>
+						</div>
+					</div>
 				</div>
 			<?php endwhile; // end of the loop. ?>
 
