@@ -73,9 +73,9 @@ if(is_page('hepc') || is_page('about-hepc')) {
 						<div class="col-8 d-none d-md-block">
 							<?php 
 							if($theme === 'hcp') :
-								echo '<div class="header-small">You\'re currently viewing the Healthcare Professionals section. For the Public Section, click <a href="'.get_permalink(get_page_by_path('hepc')).'">here</a>.</div>';
+								echo '<div class="header-small">You\'re currently viewing the Healthcare Professionals section. <br>For the Public Section, click <a href="'.esc_url( home_url( '/' ) ).'">here</a>.</div>';
 							else :
-								echo '<div class="header-small">You\'re currently viewing the Public section. For Healthcare Professionals, click <a href="'.esc_url( home_url( '/' ) ).'">here</a>.</div>';
+								echo '<div class="header-small">You\'re currently viewing the Public section. <br>For Healthcare Professionals, click <a href="'.get_permalink(get_page_by_path('hcp')).'">here</a>.</div>';
 							endif;
 							?>
 							<nav class="navbar navbar-expand-md">			
@@ -124,9 +124,9 @@ if(is_page('hepc') || is_page('about-hepc')) {
 						<div class="col-12 d-md-none d-sm-block d-block">
 							<?php 
 							if($theme === 'hcp') :
-								echo '<div class="header-small">You\'re currently viewing the Healthcare Professionals section. For the Public section, click <a href="'.get_permalink(get_page_by_path('hepc')).'">here</a>.</div>';
+								echo '<div class="header-small">You\'re currently viewing the Healthcare Professionals section.<br> For the Public section, click <a href="'.esc_url( home_url( '/' ) ).'">here</a>.</div>';
 							else :
-								echo '<div class="header-small">You\'re currently viewing the Public section. For Healthcare Professionals, click <a href="'.esc_url( home_url( '/' ) ).'">here</a>.</div>';
+								echo '<div class="header-small">You\'re currently viewing the Public section.<br> For Healthcare Professionals, click <a href="'.get_permalink(get_page_by_path('hcp')).'">here</a>.</div>';
 							endif;
 							?>
 							<nav class="navbar navbar-expand-md">			
@@ -162,13 +162,14 @@ if(is_page('hepc') || is_page('about-hepc')) {
 					</div>
 				</div>
 			</header>
-			<?php if($theme === 'hcp' && !is_page('register')) : ?>
-				<a href="<?php echo get_permalink(get_page_by_path('register')); ?>"><div class="<?=$theme?> floating-cta"></div></a>
-				<div class="container-fluid">
+			<?php if($theme === 'hcp') : ?>
+				<div class="container-fluid hcp-title">
 					<div class="row">
 						<div class="col">
-							<?php if(is_front_page() || is_page('welcome') || is_page('register') || is_404()) : ?>
+							<?php if(is_front_page() || is_page('register') || is_404()) : ?>
 							<h1 class="page-title center"><?php the_title(); ?></h1>
+							<?php elseif(is_page('hcp')) : ?>
+							<h1 class="page-title center">Welcome</h1>
 						<?php else :
 							if(get_field('cover_photo')) {
 								$cover_photo = get_field('cover_photo');

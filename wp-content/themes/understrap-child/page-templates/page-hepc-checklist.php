@@ -9,7 +9,7 @@ get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<div class="wrapper checklist-wrapper" id="full-width-page-wrapper">
+<div class="wrapper hcp-title checklist-wrapper" id="full-width-page-wrapper">
 
 	<div class="content-area" id="primary">
 
@@ -18,9 +18,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<div class="checklist-quiz container">
-					<div class="overlay-div">
-						<h1>Checklist</h1>
-					</div>
+					<h1>Checklist</h1>
 					<?php if(have_rows('checklist')) :
 						$count = 1;
 						$maxcount = count(get_field('checklist'));
@@ -37,7 +35,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 								</div>
 								<div class="col-sm-7 col-12">
 									<h3>Should I get tested for Hep C?</h3>
-									<span class="red-question"><?=$count?>. </span><?php the_sub_field('question'); ?>
+									<?php the_sub_field('question'); ?>
 									<fieldset>
 										<label for="yes-<?=$count?>">
 											<input type="radio" id="yes-<?=$count?>" name="q-<?=$count?>" data-nextcount="<?=$nextcount?>" value="Yes" class="yes-check">

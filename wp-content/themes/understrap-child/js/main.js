@@ -1,11 +1,12 @@
 jQuery(document).ready(function($) {
-	$(window).on('scroll', function() {
-		if($(window).scrollTop() > 200) {
-			$('.floating-cta').show();
-		} else {
-			$('.floating-cta').hide();
+	if($(window).width() <= 480) {
+		if($('h1.page-title').text() === 'HCV Screening & Confirmed Algorithm') {
+			$('h1.page-title').html('HCV Screening <br>&<br> Confirmed Algorithm');
 		}
-	});
+		if($('h1.page-title').text() === 'Management & Treatment') {
+			$('h1.page-title').html('Management <br>&<br> Treatment');
+		}
+	}
 
 	$('#fullpage').fullpage({
 		navigation: true,

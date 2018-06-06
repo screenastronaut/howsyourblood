@@ -38,7 +38,7 @@ ORDER BY `submit_time` DESC";
 $queryresults = $wpdb->get_results($querystring);
 ?>
 
-<div class="wrapper" id="full-width-page-wrapper">
+<div class="wrapper hcp-title" id="full-width-page-wrapper">
 
 	<div class="content-area" id="primary">
 
@@ -122,7 +122,7 @@ $queryresults = $wpdb->get_results($querystring);
 						<div class="col center">
 							<p>If you would like your clinics/hospitals listed here, please click on the button below.</p>
 							<a href="<?php echo get_permalink(get_page_by_path('register'));?>" rel="noopener">
-								<div class="cta-link">Register</div>
+								<div class="cta-link">Be a Partner</div>
 							</a>
 						</div>
 					</div>

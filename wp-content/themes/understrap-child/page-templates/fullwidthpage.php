@@ -11,10 +11,10 @@ get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<div class="wrapper" id="full-width-page-wrapper">
+<div class="wrapper hcp-title" id="full-width-page-wrapper">
 
 	<?php 
-	if(is_page('welcome')) : ?>
+	if(is_page('hcp')) : ?>
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col center">

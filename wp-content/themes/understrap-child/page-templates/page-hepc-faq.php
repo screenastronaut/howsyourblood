@@ -11,7 +11,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 global $theme;
 ?>
 
-<div class="wrapper" id="full-width-page-wrapper">
+<div class="wrapper hcp-title" id="full-width-page-wrapper">
 
 	<div class="content-area" id="primary">
 

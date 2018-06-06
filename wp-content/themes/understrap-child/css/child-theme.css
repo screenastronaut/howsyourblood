@@ -10173,7 +10173,7 @@ html {
 
 body {
   font-family: acumin-pro-condensed, sans-serif;
-  font-size: 18px;
+  font-size: 19px;
   font-style: normal;
   font-weight: 500;
   line-height: 1.25; }
@@ -10204,7 +10204,7 @@ body.blue-theme {
     left: 0;
     right: 0;
     height: 10px;
-    z-index: 1; }
+    z-index: 99999; }
   body.blue-theme .entry-content.hecp-theme {
     padding-top: 100px; }
   body.blue-theme h1 {
@@ -10221,30 +10221,30 @@ h1, h2, h3, h4, h5, h6 {
   font-family: acumin-pro-condensed, sans-serif;
   font-weight: 800;
   line-height: 1.25;
-  margin-bottom: 18px;
-  margin-top: 36px; }
+  margin-bottom: 19px;
+  margin-top: 38px; }
   h1 span.blue, h2 span.blue, h3 span.blue, h4 span.blue, h5 span.blue, h6 span.blue {
     color: #47c9f4; }
 
 h1 {
-  font-size: 54px;
+  font-size: 57px;
   text-transform: uppercase; }
 
 h2 {
-  font-size: 45px;
+  font-size: 47.5px;
   text-transform: uppercase; }
 
 h3 {
-  font-size: 36px; }
+  font-size: 38px; }
 
 h4 {
-  font-size: 23.94px;
+  font-size: 25.27px;
   line-height: 1.2;
-  margin-top: 23.94px;
+  margin-top: 25.27px;
   text-transform: unset; }
 
 p {
-  margin-bottom: 9px; }
+  margin-bottom: 9.5px; }
   p.grey-text {
     color: #4e4e4e; }
 
@@ -10275,7 +10275,7 @@ hr {
   margin: 60px auto; }
 
 .wrapper {
-  min-height: calc(100vh - 90px - 110px);
+  min-height: calc(100vh - 120px - 110px);
   padding: 0; }
 
 .logo img {
@@ -10295,19 +10295,24 @@ hr {
     background: url(../img/floating-cta-blue.png) #47c9f4 no-repeat center; }
 
 .site-header {
-  height: 90px; }
+  background: white;
+  height: 120px;
+  position: fixed;
+  top: 10px;
+  width: calc(100% - 20px);
+  z-index: 9999; }
   .site-header .page-title {
     text-align: center; }
   .site-header .header-small {
-    font-size: 12.996px;
+    font-size: 13.718px;
     padding-right: 0.5rem;
-    padding-top: 30px;
+    padding-top: 10px;
     text-align: right; }
   .site-header .navbar {
     padding: 0; }
     .site-header .navbar a {
       color: #000;
-      font-size: 12.996px;
+      font-size: 13.718px;
       font-weight: 800;
       text-decoration: none;
       text-transform: uppercase; }
@@ -10327,26 +10332,8 @@ hr {
       width: 75%;
       z-index: 99; }
 
-.hepc-header {
-  background: white;
-  position: fixed;
-  top: 10px;
-  width: calc(100% - 20px);
-  z-index: 9999; }
-
-.floating-cta {
-  border-radius: 50%;
-  height: 80px;
-  width: 80px;
-  position: fixed;
-  bottom: 15%;
-  right: 3%;
-  transition: border-radius 0.5s, width 0.5s, height 0.5s;
-  z-index: 99999; }
-  .floating-cta:hover {
-    border-radius: 10px;
-    height: 88px;
-    width: 145px; }
+.hcp-title {
+  padding-top: 120px; }
 
 .below-logo-text {
   font-size: 12px; }
@@ -10377,7 +10364,7 @@ hr {
   text-transform: uppercase; }
   .no-footer ul.translate li {
     float: left;
-    font-size: 13.986px;
+    font-size: 14.763px;
     font-weight: 800;
     padding: 0 5px; }
     .no-footer ul.translate li.current-lang a {
@@ -10403,7 +10390,7 @@ hr {
     text-transform: uppercase; }
     .hepc-footer ul.translate li {
       float: left;
-      font-size: 13.986px;
+      font-size: 14.763px;
       font-weight: 800;
       list-style-type: none;
       padding: 0 5px; }
@@ -10519,7 +10506,7 @@ svg {
 
 .entry-content .welcome-bg {
   height: 400px;
-  margin-bottom: 18px;
+  margin-bottom: 19px;
   padding: 30px 0;
   text-align: center; }
 .entry-content ul li {
@@ -10672,25 +10659,17 @@ svg {
   flex-direction: column;
   justify-content: center; }
 
-.checklist-quiz .overlay-div {
-  position: absolute;
-  z-index: 1; }
-  .checklist-quiz .overlay-div h1 {
-    margin-top: 0; }
 .checklist-quiz .question-row {
   display: none; }
   .checklist-quiz .question-row.active-question {
     display: flex; }
-  .checklist-quiz .question-row img {
-    float: right; }
   .checklist-quiz .question-row h3 {
-    font-size: 33.84px; }
+    font-size: 35.72px; }
 .checklist-quiz span.red-question {
   color: #c33b47;
-  font-size: 23.94px;
   font-weight: 800; }
   .checklist-quiz span.red-question + p {
-    font-size: 21.96px;
+    font-size: 23.18px;
     margin-left: 20px; }
 .checklist-quiz p {
   font-weight: 700; }
@@ -10699,7 +10678,7 @@ svg {
 .checklist-quiz label {
   color: #c33b47;
   cursor: pointer;
-  font-size: 23.94px;
+  font-size: 25.27px;
   font-weight: 800;
   margin-bottom: 5px;
   margin-left: 20px;
@@ -10812,37 +10791,32 @@ Old Phase 1
   .signup-footer span {
     vertical-align: bottom; }
 
-@media (max-width: 768px) {
-  .site-signup {
-    background: url(../img/background-mobile.png) no-repeat;
-    background-size: cover; }
-
-  .blood-tube.d-md-block img {
-    position: relative;
-    margin-top: 100px; } }
 @media (min-width: 1921px) {
   body {
-    font-size: 36px; }
+    font-size: 38px; }
 
   h1 {
-    font-size: 90px; }
+    font-size: 95px; }
 
   h2 {
-    font-size: 81px; }
+    font-size: 85.5px; }
 
   h3 {
-    font-size: 54px; }
+    font-size: 57px; }
 
   h4 {
-    font-size: 45px;
-    margin-top: 45px; }
+    font-size: 47.5px;
+    margin-top: 47.5px; }
 
   p {
-    font-size: 36px;
-    margin-bottom: 9px; }
+    font-size: 38px;
+    margin-bottom: 9.5px; }
 
   .site-header {
-    height: 225px; } }
+    height: 225px; }
+
+  .hcp-title {
+    padding-top: 225px; } }
 @media (min-width: 1920px) {
   .container {
     max-width: 1600px; }
@@ -10850,7 +10824,7 @@ Old Phase 1
   .site-header .header-small,
   .site-header .navbar a,
   .site-footer span {
-    font-size: 18px; }
+    font-size: 19px; }
 
   .checklist-quiz {
     margin-top: 30px; } }
@@ -10869,51 +10843,55 @@ Old Phase 1
     position: relative; } }
 @media (max-width: 768px) {
   body {
-    font-size: 18px;
+    font-size: 19px;
     line-height: 1.25; }
     body.blue-theme h1 {
       font-size: 48px; }
 
+  .site-header .header-small {
+    padding-top: 0; }
   .site-header .hcp-cta img {
     width: 100%; }
 
   .hepc-header .hcp-cta {
     right: 3% !important; }
 
-  .floating-cta {
-    background-size: 40%;
-    height: 80px;
-    width: 80px; }
-    .floating-cta:hover {
-      background-size: contain;
-      height: 44px;
-      width: 72px; }
-
   .resources h4 {
-    height: 80px; } }
+    height: 80px; }
+
+  .site-signup {
+    background: url(../img/background-mobile.png) no-repeat;
+    background-size: cover; }
+
+  .blood-tube.d-md-block img {
+    position: relative;
+    margin-top: 100px; } }
 @media (max-width: 767px) {
   h1 {
-    font-size: 45px; }
+    font-size: 47.5px; }
 
   h2 {
-    font-size: 36px; }
+    font-size: 38px; }
 
   h3 {
-    font-size: 23.94px; }
+    font-size: 25.27px; }
 
   h4 {
-    font-size: 19.98px;
-    margin-top: 19.98px; }
+    font-size: 21.09px;
+    margin-top: 21.09px; }
 
   p {
-    margin-bottom: 9px; }
+    margin-bottom: 9.5px; }
 
   .site-header {
     height: 350px;
-    margin-bottom: 10px; }
+    position: relative; }
     .site-header .navbar li {
       border: 1px solid lightgrey;
       text-align: center; }
+
+  .hcp-title {
+    padding-top: 0; }
 
   .welcome-bg {
     height: 500px !important; }
@@ -10928,9 +10906,8 @@ Old Phase 1
   .resources h4 {
     height: 60px !important; } }
 @media (max-width: 480px) {
-  .site-header .header-small {
-    margin-left: 20%;
-    width: 80%; }
+  h1.center {
+    text-align: left; }
 
   .site-footer span {
     padding: 0; }
