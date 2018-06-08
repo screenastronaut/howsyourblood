@@ -97,4 +97,12 @@ jQuery(document).ready(function($) {
 		$('.high-risk').hide();
 		$('.low-risk').hide();
 	});
+
+	if($('.algorithm .right-arrow').length) {
+		var boxheight = $('#first-box').outerHeight();
+		var arrowmargin = boxheight/2 - 20;
+		$('.algorithm .right-arrow').css({
+			'margin-top': arrowmargin,
+		});
+	}
 });

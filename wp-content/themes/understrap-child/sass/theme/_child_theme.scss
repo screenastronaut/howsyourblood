@@ -699,106 +699,271 @@ svg {
 
 .checklist-quiz {
 	// .overlay-div {
-	// 	position: absolute;
-	// 	z-index: 1;
+		// 	position: absolute;
+		// 	z-index: 1;
 
-	// 	h1 {
-	// 		margin-top: 0;
-	// 	}
-	// }
+		// 	h1 {
+			// 		margin-top: 0;
+			// 	}
+			// }
 
-	.question-row {
-		display: none;
+			.question-row {
+				display: none;
 
-		&.active-question {
-			display: flex;
+				&.active-question {
+					display: flex;
+				}
+
+				img {
+					// float: right;
+				}
+
+				h3 {
+					font-size: $base-font-size*1.88;
+				}
+			}
+
+			span.red-question {
+				color: $primary;
+				// font-size: $base-font-size*1.33;
+				font-weight: 800;
+
+				&+p {
+					font-size: $base-font-size*1.22;
+					margin-left: 20px;
+				}
+			}
+
+			p {
+				font-weight: 700;
+			}
+
+			fieldset {
+				margin-left: 30px;
+			}
+
+			label {
+				color: $primary;
+				cursor: pointer;
+				font-size: $base-font-size * 1.33;
+				font-weight: 800;
+				margin-bottom: 5px;
+				margin-left: 20px;
+				padding-left: 25px;
+				padding-top: 3px;
+				position: relative;
+				text-transform: uppercase;
+
+				.control_indicator {
+					border-radius: 50%;
+				}
+			}
+
+			.control_indicator {
+				position: absolute;
+				top: 12px;
+				left: 0;
+				height: 15px;
+				width: 15px;
+				background: #ffffff;
+				border: 1px solid $primary;
+			}
+
+			input[type="radio"] {
+				position: absolute;
+				z-index: -1;
+				opacity: 0;
+				margin-left: 30px;
+			}
+
+			label:hover input ~ .control_indicator,
+			label input:focus ~ .control_indicator,
+			label input:checked ~ .control_indicator {
+				background: $primary;
+			}
+
+			.cta-link {
+				margin-top: 30px;
+			}
 		}
 
-		img {
-			// float: right;
+		.checklist-result {
+			display: none; 
+
+			.high-risk,
+			.low-risk {
+				display: none;
+			}
+
+			p.results {
+				font-size: 20px;
+				font-weight: 700;
+				margin-top: 30px;
+			}
 		}
 
-		h3 {
-			font-size: $base-font-size*1.88;
-		}
+/*
+Algorithm
+*/
+.algorithm {
+	h2 {
+		text-align: center;
 	}
-
-	span.red-question {
-		color: $primary;
-		// font-size: $base-font-size*1.33;
+	
+	.base {
+		color: #000;
+		font-size: $base-font-size;
 		font-weight: 800;
+		padding: 15px;
+		text-align: center;
+	}
 
-		&+p {
-			font-size: $base-font-size*1.22;
-			margin-left: 20px;
+	.base-left {
+		color: #000;
+		font-size: $base-font-size;
+		font-weight: 800;
+		padding: 15px;
+		text-align: left;
+
+		ol {
+			padding-left: 15px;
 		}
 	}
 
-	p {
-		font-weight: 700;
+	.full {
+		width: 100%;
 	}
 
-	fieldset {
-		margin-left: 30px;
+	.half-left {
+		float: left;
+		margin-right: 1%;
+		width: 49%;
 	}
 
-	label {
-		color: $primary;
-		cursor: pointer;
-		font-size: $base-font-size * 1.33;
-		font-weight: 800;
-		margin-bottom: 5px;
-		margin-left: 20px;
-		padding-left: 25px;
-		padding-top: 3px;
+	.half-right {
+		float: left;
+		margin-left: 1%;
+		width: 49%;
+	}
+
+	.long-left,
+	.long-right {
+		width: 48%;
+
+		.blue-border {
+			padding: 30px 45px;
+		}
+	}
+
+	.same-height-row {
+		display: flex;
+	}
+
+	.long-right {
+		margin-left: 2%;
+	}
+	
+	.right-arrow {
+		border-top: 3px solid $primary;
+		flex: 1;
+		height: 10px;
 		position: relative;
-		text-transform: uppercase;
+		width: 2%;
 
-		.control_indicator {
-			border-radius: 50%;
+		&:after {
+			left: 100%;
+			top: 50%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+			border-left-color: $primary;
+			border-width: 12px;
+			margin-top: -16px;
 		}
 	}
 
-	.control_indicator {
-		position: absolute;
-		top: 12px;
-		left: 0;
-		height: 15px;
-		width: 15px;
-		background: #ffffff;
-		border: 1px solid $primary;
+	.vertical-line {
+		border-right: 3px solid $primary;
+		height: 30px;
+		width: 50%;
 	}
 
-	input[type="radio"] {
-		position: absolute;
-		z-index: -1;
-		opacity: 0;
-		margin-left: 30px;
+	.split-unite-lines {
+		border: 3px solid $primary;
+		border-bottom: none;
+		clear: both;
+		height: 30px;
+		margin: 0 auto;
+		width: 50%;
 	}
 
-	label:hover input ~ .control_indicator,
-	label input:focus ~ .control_indicator,
-	label input:checked ~ .control_indicator {
-		background: $primary;
+	.split-lines {
+		border-left: 3px solid $primary;
+		border-right: 3px solid $primary;
+		clear: both;
+		height: 30px;
+		margin: 0 auto;
+		width: 50%;
+	}
+	
+	.down-arrow {
+		border-left: 3px solid $primary;
+		clear: both;
+		height: 30px;
+		position: relative;
+		margin: 0 auto;
+		width: 50%;
+
+		&:after {
+			top: 100%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+			border-top-color: $primary;
+			border-width: 12px;
+			margin-left: -14px;
+		}
 	}
 
-	.cta-link {
-		margin-top: 30px;
-	}
-}
-
-.checklist-result {
-	display: none; 
-
-	.high-risk,
-	.low-risk {
-		display: none;
+	.blue-border {
+		border: 3px solid $secondary;
 	}
 
-	p.results {
-		font-size: 20px;
-		font-weight: 700;
-		margin-top: 30px;
+	.red-border {
+		border: 3px dashed $primary;
+		display: flex;
+		align-items: center;
+	}
+
+	.blue-bg {
+		background-color: $secondary;
+	}
+
+	.grey-bg {
+		background-color: #ebebeb;
+	}
+
+	.grey-text {
+		color: $grey;
+	}
+
+	.red-text {
+		color: $primary;
+		font-size: $base-font-size*1.28;
+	}
+
+	.unbold-text {
+		font-weight: 400;
+	}
+
+	.small-text {
+		font-size: $base-font-size*0.88;
 	}
 }
 
