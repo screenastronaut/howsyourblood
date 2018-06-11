@@ -50,7 +50,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 											</div>
 											<div class="align-self-center offset-xl-6 offset-lg-6 offset-md-6 col-xl-4 col-lg-4 col-md-4 col-sm-8 col-8">
 												<span>&copy;Copyright 2017. All rights reserved by Hepatitis Free Malaysia.</span>
-												<ul class="translate"><?php pll_the_languages(array('display_names_as' => 'slug', 'hide_if_empty' => 0)); ?></ul>
+												<!-- <ul class="translate"><?php pll_the_languages(array('display_names_as' => 'slug', 'hide_if_empty' => 0)); ?></ul> -->
 											</div>
 
 										</div><!-- row end -->
