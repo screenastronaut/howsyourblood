@@ -21,6 +21,11 @@ global $theme;
 				<div class="container">
 					<div class="row">
 						<div class="col">
+							<?php the_field('sa'); ?>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
 							<figure class="algorithm">
 								<h2>Serological Testing</h2>
 								<div class="base full blue-border">
@@ -116,7 +121,7 @@ global $theme;
 					</div>
 					<div class="row">
 						<div class="col">
-							<?php //the_content(); ?>
+							<?php the_field('abb'); ?>
 						</div>
 					</div>
 				</div>
